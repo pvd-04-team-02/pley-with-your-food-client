@@ -1,1 +1,53 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+    margin:0;
+}
+.navbar {
+    max-height: 69px;
+    overflow: hidden;
+    background-color: #ff43229f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+  .navbar-mid {
+    float: center;
+    color: #000;
+  }
+
+  .navbar-right {
+    float: right;
+  }
+  
+  .page-header-image {
+    position: relative;
+    height: 800px;
+    background-image: url('../../public/spaghetti.jpg');
+    background-position: 100%;
+    background-size: cover;
+    margin-top: 69px;
+  }
+
+  .main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px; /* Used in this example to enable scrolling */
+  }
