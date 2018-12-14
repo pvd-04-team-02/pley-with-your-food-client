@@ -19,11 +19,34 @@
             </div>
             <div class="navbar-right">
             <a href="#navsignup">Sign Up</a>
-            <a href="#navlogin">Login</a> 
+            <a href="#navlogin">Login</a>
             </div>
           </div>
 
         <div class="page-header-image">
+        </div>
+        <div>
+
+
+  <form id="sign-up" class="border">
+    <fieldset>
+     <legend>Sign up!</legend>
+     <input type="text" name="credentials[email]" placeholder="Email" />
+     <input type="password" name="credentials[password]" placeholder="Password" />
+     <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
+     <input type="submit"  value="Sign Up!"/>
+    </fieldset>
+  </form>
+  <p id="message"></p>
+  <form id="log-in" class="border">
+    <fieldset>
+     <legend>Login!</legend>
+     <input type="text" name="credentials[email]" placeholder="Email" />
+     <input type="password" name="credentials[password]" placeholder="Password" />
+     <input type="submit"  value="Log In!"/>
+   </fieldset>
+ </form>
+<div id='signInResults'></div>
         </div>
     </body>
 </html>
