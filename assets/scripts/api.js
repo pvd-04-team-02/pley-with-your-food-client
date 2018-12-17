@@ -39,9 +39,48 @@ const changePassword = function (data) {
   })
 }
 
+const createRestaurant = function (data) {
+  return $.ajax({
+      url: baseUrl + '/restaurants',
+      // need to verify route is correct look at backend
+      method: 'POST',
+      headers: {
+      Authorization: 'Token token=' + store.user.token
+      },
+      data
+  })
+  }
+
+const createRating = function (data) {
+  return $.ajax({
+      url: baseUrl + data.restaurant.id + '/ratings',
+      method: 'POST',
+      headers: {
+      Authorization: 'Token token=' + store.user.token
+      },
+      data
+  })
+  }
+
+const createReview= function (data) {
+  return $.ajax({
+    url: baseUrl + data.restaurant.id + '/reviews',
+    method: 'POST',
+    headers: {
+    Authorization: 'Token token=' + store.user.token
+    },
+    data
+})
+}
+
+
+
 module.exports = {
   signUp,
   logIn,
   signOut,
-  changePassword
+  changePassword,
+  createRestaurant,
+  createReview,
+  createRating
 }
