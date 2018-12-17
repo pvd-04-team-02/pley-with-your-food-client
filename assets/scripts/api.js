@@ -41,33 +41,33 @@ const changePassword = function (data) {
 
 const createRestaurant = function (data) {
   return $.ajax({
-      url: baseUrl + '/restaurants',
-      // need to verify route is correct look at backend
-      method: 'POST',
-      headers: {
+    url: baseUrl + '/restaurants',
+    // need to verify route is correct look at backend
+    method: 'POST',
+    headers: {
       Authorization: 'Token token=' + store.user.token
-      },
-      data
+    },
+    data
   })
-  }
+}
 
 const createRating = function (data) {
   return $.ajax({
-      url: baseUrl + data.restaurant.id + '/ratings',
-      method: 'POST',
-      headers: {
+    url: baseUrl + data.restaurant.id + '/ratings',
+    method: 'POST',
+    headers: {
       Authorization: 'Token token=' + store.user.token
-      },
-      data
+    },
+    data
   })
-  }
+}
 
-const createReview= function (data) {
+const createReview = function (data) {
   return $.ajax({
     url: baseUrl + data.restaurant.id + '/reviews',
     method: 'POST',
     headers: {
-    Authorization: 'Token token=' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     },
     data
 })

@@ -42,6 +42,46 @@ const onLogIn = event => {
     .then(ui.logInSuccess)
     .catch(ui.signUpFailure)
 }
+const onSignOut = event => {
+  event.preventDefault()
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+const onCreate = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  // $(event.target).trigger('reset')
+  api.Create(data)
+    .then(ui.CreateSuccess)
+    .catch(ui.CreateFailure)
+}
+const onIndex = event => {
+  event.preventDefault()
+  // const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.index()
+    .then(ui.IndexSuccess)
+    .catch(ui.IndexFailure)
+}
+const onDelete = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.Delete(data.restaurant.id)
+    .then(ui.DeleteSuccess)
+    .catch(ui.DeleteFailure)
+}
+const onUpdate = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.Update(data, data.restaurant.id)
+    .then(ui.UpdateSuccess)
+    .catch(ui.UpdateFailure)
+}
+
 
 let myIndex = 0;
 
@@ -61,5 +101,10 @@ module.exports = {
   onSignUp,
   onLogIn,
   onChangePassword,
+  onSignOut,
+  onCreate,
+  onIndex,
+  onDelete,
+  onUpdate,
   carousel
 }

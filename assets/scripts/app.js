@@ -10,6 +10,11 @@ $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#log-in').on('submit', events.onSignIn)
   $('#change-password').on('submit', events.changePassword)
+  $('#sign-out').on('submit', events.onSignOut)
+  $('#Add').on('submit', events.onCreate)
+  $('.Edit').on('submit', events.onUpdate)
+  $('.Delete').on('submit', events.onDelete)
+  $('.Index').on('submit', events.onIndex)
   $(document).ready(events.carousel)
   $('.message a').click(function () {
     $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow')
