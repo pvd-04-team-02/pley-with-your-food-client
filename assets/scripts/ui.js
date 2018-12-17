@@ -22,7 +22,7 @@ const logInSuccess = data => {
   $('#message').addClass('success')
   $('#results2').show()
   console.log('logInSuccess ran. Data is:', data)
-  $('#sign-out')[0].reset()
+  $('#log-in')[0].reset()
 }
 const signOutSuccess = data => {
   $('#message').text('Signed out succesfully')
@@ -57,7 +57,7 @@ const createRestaurantSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('createRatingSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
+  $('#create-restaurant')[0].reset()
 }
 const createRestaurantFailure = error => {
   $('#message').text('Error on sign up')
@@ -71,7 +71,7 @@ const createRatingSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('createRatingSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
+  $('#create-Rating')[0].reset()
 }
 const createRatingFailure = error => {
   $('#message').text('Error on sign up')
@@ -85,7 +85,7 @@ const createReviewSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('createReviewSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
+  $('#createR-ating')[0].reset()
 }
 const createReviewFailure = error => {
   $('#message').text('Error on sign up')
