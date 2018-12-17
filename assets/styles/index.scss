@@ -40,10 +40,11 @@ body {
   .page-header-image {
     position: relative;
     height: 800px;
-    background-image: url('../../public/spaghetti.jpg');
-    background-position: 100%;
-    background-size: cover;
     margin-top: 69px;
+  }
+
+  .myPhotos {
+    width: 100%;
   }
 
   .main {

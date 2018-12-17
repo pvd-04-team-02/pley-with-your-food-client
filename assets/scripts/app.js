@@ -10,4 +10,6 @@ $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#log-in').on('submit', events.onSignIn)
   $('#change-password').on('submit', events.changePassword)
+
+  $(document).ready(events.carousel)
 })
