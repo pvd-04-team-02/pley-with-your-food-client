@@ -43,8 +43,23 @@ const onLogIn = event => {
     .catch(ui.signUpFailure)
 }
 
+let myIndex = 0;
+
+function carousel() {
+    let i;
+    let x = document.getElementsByClassName("myPhotos");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+
 module.exports = {
   onSignUp,
   onLogIn,
-  onChangePassword
+  onChangePassword,
+  carousel
 }
