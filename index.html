@@ -25,28 +25,32 @@
 
         <div class="page-header-image">
         </div>
-        <div>
 
-
-  <form id="sign-up" class="border">
-    <fieldset>
-     <legend>Sign up!</legend>
-     <input type="text" name="credentials[email]" placeholder="Email" />
-     <input type="password" name="credentials[password]" placeholder="Password" />
-     <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" />
-     <input type="submit"  value="Sign Up!"/>
-    </fieldset>
-  </form>
-  <p id="message"></p>
-  <form id="log-in" class="border">
-    <fieldset>
-     <legend>Login!</legend>
-     <input type="text" name="credentials[email]" placeholder="Email" />
-     <input type="password" name="credentials[password]" placeholder="Password" />
-     <input type="submit"  value="Log In!"/>
-   </fieldset>
- </form>
-<div id='signInResults'></div>
+        <!-- All login/signup forms  -->
+        <div class="authp">
+          <div class="login-page">
+            <div class="form">
+              <form id="sign-up">
+                <span class="far fa-user"></span>
+                <input type="text" name="credentials[email]" placeholder="Email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+                <span class="fas fa-lock"></span>
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <span class="fas fa-lock"></span>
+                <input type="password" name="credentials[password_confirmation]"
+                       placeholder="Confirm Password">
+                <button>Sign up</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+              </form>
+              <form id="sign-in">
+                <span class="far fa-user"></span>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <span class="fas fa-lock"></span>
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <button>Log in</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+              </form>
+            </div>
+          </div>
         </div>
 
   <footer>
