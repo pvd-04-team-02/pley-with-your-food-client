@@ -80,19 +80,19 @@ const createRatingFailure = error => {
   console.error('createFailure ran. Error is :', error)
   // $('#sign-up')[0].reset()
 }
-const createReviewSuccess = data => {
-  $('#message').text('created restaurant successfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('createReviewSuccess ran. Data is :', data)
-  $('#createR-ating')[0].reset()
-}
-const createReviewFailure = error => {
-  $('#message').text('Error on sign up')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.error('createFailure ran. Error is :', error)
-}
+// const createReviewSuccess = data => {
+//   $('#message').text('created restaurant successfully')
+//   $('#message').removeClass()
+//   $('#message').addClass('success')
+//   console.log('createReviewSuccess ran. Data is :', data)
+//   $('#createR-ating')[0].reset()
+// }
+// const createReviewFailure = error => {
+//   $('#message').text('Error on sign up')
+//   $('#message').removeClass()
+//   $('#message').addClass('failure')
+//   console.error('createFailure ran. Error is :', error)
+// }
 
 
 module.exports = {
@@ -106,7 +106,5 @@ module.exports = {
   createRestaurantSuccess,
   createRestaurantFailure,
   createRatingSuccess,
-  createRatingFailure,
-  createReviewSuccess,
-  createReviewFailure
+  createRatingFailure
 }
