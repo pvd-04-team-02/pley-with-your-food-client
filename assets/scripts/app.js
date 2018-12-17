@@ -15,7 +15,7 @@ $(() => {
   $('.Edit').on('submit', events.onUpdate)
   $('.Delete').on('submit', events.onDelete)
   $('.Index').on('submit', events.onIndex)
-
+  $(document).ready(events.carousel)
   $('.message a').click(function () {
     $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow')
   })
