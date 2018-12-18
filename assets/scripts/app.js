@@ -15,6 +15,10 @@ $(() => {
   $('#show-rating').on('click', events.showFormShow)
   $('#delete-rating').on('click', events.showFormDelete)
   $('#edit-rating').on('click', events.showFormEdit)
+  $('#create-restaurant').on('click', events.showFormCreateAdmin)
+  $('#show-restaurant').on('click', events.showFormShowAdmin)
+  $('#delete-restaurant').on('click', events.showFormDeleteAdmin)
+  $('#edit-restaurant').on('click', events.showFormEditAdmin)
 
   // submit
   $('#sign-up').on('submit', events.onSignUp)

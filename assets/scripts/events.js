@@ -78,7 +78,7 @@ const onUpdate = event => {
 }
 
 const showFormFields = () => {
-  
+
   $('.allForms').show();
 }
 
@@ -99,6 +99,23 @@ const showFormDelete = () => {
 const showFormEdit = () => {
   $('.editRating').show()
 }
+const showFormCreateAdmin = () => {
+  console.log('in show formcreate')
+  $('.createRating').show()
+}
+
+const showFormShowAdmin = () => {
+  console.log('in show formshow')
+  $('.showRating').show()
+}
+
+const showFormDeleteAdmin = () => {
+  $('.deleteRating').show()
+}
+
+const showFormEditAdmin = () => {
+  $('.editRating').show()
+}
 
 
 module.exports = {
@@ -114,5 +131,10 @@ module.exports = {
   showFormEdit,
   showFormDelete,
   showFormShow,
-  showFormCreate
+  showFormCreate,
+  showFormEditAdmin,
+  showFormDeleteAdmin,
+  showFormShowAdmin,
+  showFormCreateAdmin
+
 }
