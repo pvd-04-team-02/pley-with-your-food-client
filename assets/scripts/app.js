@@ -5,6 +5,7 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 const events = require('./events.js')
+const siteFunc = require('./site.js')
 
 $(() => {
   $('#sign-up').on('submit', events.onSignUp)
@@ -15,7 +16,8 @@ $(() => {
   $('.Edit').on('submit', events.onUpdate)
   $('.Delete').on('submit', events.onDelete)
   $('.Index').on('submit', events.onIndex)
-  $(document).ready(events.carousel)
+  $('#accButton').on('click', siteFunc.authForms)
+  $(document).ready(siteFunc.randrForms)
   $('.message a').click(function () {
     $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow')
   })

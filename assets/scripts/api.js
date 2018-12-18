@@ -10,7 +10,7 @@ console.log(data)
   })
 }
 
-const logIn = data => {
+const signIn = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
@@ -77,7 +77,7 @@ const createRating = function (data) {
 
 module.exports = {
   signUp,
-  logIn,
+  signIn,
   signOut,
   changePassword,
   createRestaurant,
