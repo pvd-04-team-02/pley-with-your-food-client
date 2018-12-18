@@ -9,7 +9,7 @@ const mainForms = () => {
 }
 
 const randrForms = () => {
-    $('.allForms').hide()
+    // $('.allForms').hide()
 }
 
 module.exports = {
