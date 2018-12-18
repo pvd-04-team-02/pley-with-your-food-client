@@ -1,8 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
-body {
-    margin:0;
-}
+// body {
+//     margin:0;
+// }
 .navbar {
     max-height: 69px;
     overflow: hidden;
@@ -48,27 +48,33 @@ body {
     0% {
       background: url('../../public/fancydrinks.jpg')no-repeat 0 0;
       background-size: 100% 100%;
+      z-index: -1;
     }
     25% {
       background: url('../../public/drink.jpg')no-repeat 0 0;
       background-size: 100% 100%;
+      z-index: -1;
     }
     50% {
       background: url('../../public/spaghetti.jpg')no-repeat 0 0;
       background-size: 100% 100%;
+      z-index: -1;
     }
     75% {
       background: url('../../public/burger.jpeg')no-repeat 0 0;
       background-size: 100% 100%;
+      z-index: -1;
     }
     100% {
       background: url('../../public/fish.jpg')no-repeat 0 0;
       background-size: 100% 100%;
+      z-index: -1;
     }
   }
 
   .function-bar {
     position: relative;
+    top: 250px;
     text-align: center;
     z-index: 3;
   }
