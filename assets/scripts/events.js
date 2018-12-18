@@ -8,16 +8,20 @@ const store = require('./store.js')
 //   store.game = data.game
 // }
 
-const onSignUp = event => {
-  console.log('in onSignUp')
+const onSignUp = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
-  // takes this data and sends it to our server
-  // using an HTTP request (POST)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
+}
+
+const onSignIn = (event) => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.signIn(data)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
 }
 
 const onChangePassword = event => {
@@ -31,17 +35,7 @@ const onChangePassword = event => {
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)
 }
-const onLogIn = event => {
-  console.log('in onLogIn')
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  console.log(data)
-  // takes this data and sends it to our server
-  // using an HTTP request (POST)
-  api.logIn(data)
-    .then(ui.logInSuccess)
-    .catch(ui.signUpFailure)
-}
+
 const onSignOut = event => {
   event.preventDefault()
   api.signOut()
@@ -94,12 +88,12 @@ function carousel() {
     myIndex++;
     if (myIndex > x.length) {myIndex = 1}    
     x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 5000); // Change image every 2 seconds
+    setTimeout(carousel, 5000);
 }
 
 module.exports = {
   onSignUp,
-  onLogIn,
+  onSignIn,
   onChangePassword,
   onSignOut,
   onCreate,

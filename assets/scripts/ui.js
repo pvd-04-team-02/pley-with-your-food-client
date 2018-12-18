@@ -1,29 +1,37 @@
 'use strict'
 
-$('#signInResults ').hide()
+const siteFunc = require('./site.js')
+
 const signUpSuccess = data => {
-  $('#message').text('Signed up succesfully')
-  $('#message').removeClass()
-  $('#message').addClass('success')
-  console.log('signUpSuccess ran. Data is:', data)
-  $('#sign-out')[0].reset()
+  $('#authmessage').empty()
+  $('#authmessage').text('Account Created!')
+  $('#sign-up')[0].reset()
 }
 
 const signUpFailure = error => {
-  $('#message').text('Error on Sign Up')
-  $('#message').removeClass()
-  $('#message').addClass('failure')
-  console.log('signUpFailure ran. Error is:', error)
-  $('#sign-out')[0].reset()
+  $('#authmessage').empty()
+  $('#authmessage').text('Error on sign up')
+  $('#authmessage').removeClass()
+  $('#authmessage').addClass('failure')
+  $('#sign-up')[0].reset()
 }
-const logInSuccess = data => {
-  $('#message').text('Log in succesfully')
+
+const signInSuccess = data => {
+  $('#authmessage').empty()
+  $('#authmessage').text('Signed in')
   $('#message').removeClass()
-  $('#message').addClass('success')
-  $('#results2').show()
-  console.log('logInSuccess ran. Data is:', data)
-  $('#sign-out')[0].reset()
+  $('#sign-in')[0].reset()
+  siteFunc.mainForms()
 }
+
+const signInFailure = error => {
+  $('#authmessage').empty()
+  $('#authmessage').text('Error on sign in')
+  $('#authmessage').removeClass()
+  $('#authmessage').addClass('failure')
+  $('#sign-in')[0].reset()
+}
+
 const signOutSuccess = data => {
   $('#message').text('Signed out succesfully')
   $('#message').removeClass()
@@ -98,7 +106,8 @@ const createReviewFailure = error => {
 module.exports = {
   signUpSuccess,
   signUpFailure,
-  logInSuccess,
+  signInSuccess,
+  signInFailure,
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
