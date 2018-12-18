@@ -62,16 +62,16 @@ const createRating = function (data) {
   })
 }
 
-const createReview = function (data) {
-  return $.ajax({
-    url: baseUrl + data.restaurant.id + '/reviews',
-    method: 'POST',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    },
-    data
-})
-}
+// const createReview = function (data) {
+//   return $.ajax({
+//     url: baseUrl + data.restaurant.id + '/reviews',
+//     method: 'POST',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     },
+//     data
+// })
+// }
 
 
 
@@ -81,6 +81,5 @@ module.exports = {
   signOut,
   changePassword,
   createRestaurant,
-  createReview,
   createRating
 }
