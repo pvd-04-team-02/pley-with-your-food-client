@@ -39,13 +39,15 @@ body {
 
   .page-header-image {
     position: relative;
-    height: 800px;
+    height: 200px;
     margin-top: 69px;
     z-index: -1
   }
 
   .myPhotos {
     width: 100%;
+    height: 752px;
+    max-height: 752px;
   }
 
   .main {
@@ -57,6 +59,7 @@ body {
   .function-bar {
     position: relative;
     text-align: center;
+    z-index: 1
   }
 
   .jumbotron {

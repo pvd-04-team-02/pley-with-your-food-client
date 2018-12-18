@@ -1,123 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Pley With Your Food</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+<head>
+  <title>Pley With Your Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-        <div class="navbar">
-            <img src="./public/foodsenssm.png">
-            <div class="navbar-mid">
-            <h2>FoodSens</h2>
-            </div>
-            <div class="navbar-right">
-            <a href="#navsignup">Sign Up</a>
-            <a href="#navlogin">Login</a>
-            </div>
-          </div>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
 
-          <div class="page-header-image">
-            <img class="myPhotos" src="./public/drink.jpg">
-            <img class="myPhotos" src="./public/spaghetti.jpg">
-            <img class="myPhotos" src="./public/drink.jpg">
-          </div>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-          <div class="function-bar" id="userActions">
-            <div class="jumbotron col-lg-6 jumbotron-fluid">
-              <h3> User Actions</h3>
-              <button type="button" class="btn btn-dark">Create</button>
-              <button type="button" class="btn btn-dark">Show</button>
-              <button type="button" class="btn btn-dark">Delete</button>
-              <button type="button" class="btn btn-dark">Edit</button>
-            </div>
-        </div>
+<body>
+  <div class="navbar">
+    <img src="./public/foodsenssm.png">
+    <div class="navbar-mid">
+      <h2>FoodSens</h2>
+    </div>
+    <div class="navbar-right">
+      <a href="#navsignup">Sign Up</a>
+      <a href="#navlogin">Login</a>
+    </div>
+  </div>
 
-        <div class="function-bar" id="adminActions">
-            <div class="jumbotron col-lg-6 jumbotron-fluid">
-                <h3> Admin Actions</h3>
-              <button type="button" class="btn btn-dark">Create</button>
-              <button type="button" class="btn btn-dark">Show</button>
-              <button type="button" class="btn btn-dark">Delete</button>
-              <button type="button" class="btn btn-dark">Edit</button>
-            </div>
-        </div>
+  <div class="page-header-image">
+    <img class="myPhotos" src="./public/drink.jpg">
+    <img class="myPhotos" src="./public/spaghetti.jpg">
+    <img class="myPhotos" src="./public/fancydrinks.jpg">
+    <img class="myPhotos" src="./public/fish.jpg">
+  </div>
 
-          <div> <form id="createRestaurant"><p>create</p>
-            <input type='text' name='restaurant[name]' placeholder="Restaurant Name"/>
-            <input type='text' name='restaurant[address]' placeholder="Address"/>
-          </form>
-         </div>
-          <div> <form id="editRestaurant"><p>edit</p>
-            <input type='text' name='restaurant[name]' placeholder="Restaurant Name"/>
-            <input type='text' name='restaurant[address]' placeholder="Address"/>
-            <input type='text' name='restaurant[id]' placeholder="ID"/>
-          </form>
-         </div>
-         <div> <form id="deleteRestaurant"><p>delete</p>
-           <input type='text' name='restaurant[id]' placeholder="ID"/>
-         </form></div>
+  <div class="function-bar" id="userActions">
+    <div class="jumbotron col-lg-6 jumbotron-fluid">
+      <h3> User Actions</h3>
+      <button type="button" class="btn btn-dark">Create</button>
+      <button type="button" class="btn btn-dark">Show</button>
+      <button type="button" class="btn btn-dark">Delete</button>
+      <button type="button" class="btn btn-dark">Edit</button>
+    </div>
+  </div>
 
-         <div><form id="showRestaurant"><p>show</p>
-         </form></div>
+  <div class="function-bar" id="adminActions">
+    <div class="jumbotron col-lg-6 jumbotron-fluid">
+      <h3> Admin Actions</h3>
+      <button type="button" class="btn btn-dark">Create</button>
+      <button type="button" class="btn btn-dark">Show</button>
+      <button type="button" class="btn btn-dark">Delete</button>
+      <button type="button" class="btn btn-dark">Edit</button>
+    </div>
+  </div>
 
-         <div> <form id="createRating"><p>create</p>
-           <input type='float' name='rating[rate]' placeholder="Rate"/>
-           <input type='text' name='rating[address]' placeholder="Address"/> <input type='text' name='rating[restaurant]' placeholder="Restaurant ID"/>
-         </form>
-        </div>
-         <div> <form id="editRating"><p>edit</p>
-           <input type='float' name='rating[rate]' placeholder="Rate"/>
-           <input type='text' name='rating[address]' placeholder="Address"/>
-           <input type='text' name='rating[id]' placeholder="ID"/> <input type='text' name='rating [restaurant]' placeholder="Restaurant ID"/>
-         </form>
-        </div>
-        <div> <form id="deleteRating"><p>delete</p>
-          <input type='text' name='rating[id]' placeholder="ID"/>
-        </form></div>
+  <div class="allForms">
+    <div class="createRestaurant">
+      <form id="createRestaurant">
+        <p>create</p>
+        <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
+        <input type='text' name='restaurant[address]' placeholder="Address" />
+      </form>
+    </div>
+  
+    <div class="editRestaurant">
+      <form id="editRestaurant">
+        <p>edit</p>
+        <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
+        <input type='text' name='restaurant[address]' placeholder="Address" />
+        <input type='text' name='restaurant[id]' placeholder="ID" />
+      </form>
+    </div>
+  
+    <div class="deleteRestaurant">
+      <form id="deleteRestaurant">
+        <p>delete</p>
+        <input type='text' name='restaurant[id]' placeholder="ID" />
+      </form>
+    </div>
+  
+    <div class="showRestaurant">
+      <form id="showRestaurant">
+        <p>show</p>
+      </form>
+    </div>
+  
+    <div class="createRating">
+      <form id="createRating">
+        <p>create</p>
+        <input type='float' name='rating[rate]' placeholder="Rate" />
+        <input type='text' name='rating[address]' placeholder="Address" /> <input type='text' name='rating[restaurant]'
+          placeholder="Restaurant ID" />
+      </form>
+    </div>
+  
+    <div class="editRating">
+      <form id="editRating">
+        <p>edit</p>
+        <input type='float' name='rating[rate]' placeholder="Rate" />
+        <input type='text' name='rating[address]' placeholder="Address" />
+        <input type='text' name='rating[id]' placeholder="ID" /> <input type='text' name='rating [restaurant]'
+          placeholder="Restaurant ID" />
+      </form>
+    </div>
+  
+    <div class="deleteRating">
+      <form id="deleteRating">
+        <p>delete</p>
+        <input type='text' name='rating[id]' placeholder="ID" />
+      </form>
+    </div>
+  
+    <div class="showRating">
+      <form id="showRating">
+        <p>show</p>
+      </form>
+    </div>
+  </div>
 
-        <div><form id="showRating"><p>show</p>
-        </form></div>
-
-        <!-- All login/signup forms  -->
-        <div class="authp">
-          <div class="login-page">
-            <div class="form">
-              <form id="sign-up">
-                <span class="far fa-user"></span>
-                <input type="text" name="credentials[email]" placeholder="Email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
-                <span class="fas fa-lock"></span>
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <span class="fas fa-lock"></span>
-                <input type="password" name="credentials[password_confirmation]"
-                       placeholder="Confirm Password">
-                <button>Sign up</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
-              </form>
-              <form id="sign-in">
-                <span class="far fa-user"></span>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <span class="fas fa-lock"></span>
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <button>Log in</button>
-                <p class="message">Not registered? <a href="#">Create an account</a></p>
-              </form>
-            </div>
-          </div>
-        </div>
-
+  <!-- All login/signup forms  -->
+  <div class="authp">
+    <div class="login-page">
+      <div class="form">
+        <form id="sign-up">
+          <span class="far fa-user"></span>
+          <input type="text" name="credentials[email]" placeholder="Email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+            required>
+          <span class="fas fa-lock"></span>
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <span class="fas fa-lock"></span>
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <button>Sign up</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form id="sign-in">
+          <span class="far fa-user"></span>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <span class="fas fa-lock"></span>
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <button>Log in</button>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    <div> <p> Contact: </p> </div>
-    <div> <p> Info:  </p> </div>
-    <div> <p> LOGO </p> </div>
- </footer>
-    </body>
+    <div>
+      <p> Contact: </p>
+    </div>
+    <div>
+      <p> Info: </p>
+    </div>
+    <div>
+      <p> LOGO </p>
+    </div>
+  </footer>
+</body>
+
 </html>
