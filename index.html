@@ -43,13 +43,48 @@
         <div class="function-bar" id="adminActions">
             <div class="jumbotron col-lg-6 jumbotron-fluid">
                 <h3> Admin Actions</h3>
-
               <button type="button" class="btn btn-dark">Create</button>
               <button type="button" class="btn btn-dark">Show</button>
               <button type="button" class="btn btn-dark">Delete</button>
               <button type="button" class="btn btn-dark">Edit</button>
             </div>
         </div>
+
+          <div> <form id="createRestaurant"><p>create</p>
+            <input type='text' name='restaurant[name]' placeholder="Restaurant Name"/>
+            <input type='text' name='restaurant[address]' placeholder="Address"/>
+          </form>
+         </div>
+          <div> <form id="editRestaurant"><p>edit</p>
+            <input type='text' name='restaurant[name]' placeholder="Restaurant Name"/>
+            <input type='text' name='restaurant[address]' placeholder="Address"/>
+            <input type='text' name='restaurant[id]' placeholder="ID"/>
+          </form>
+         </div>
+         <div> <form id="deleteRestaurant"><p>delete</p>
+           <input type='text' name='restaurant[id]' placeholder="ID"/>
+         </form></div>
+
+         <div><form id="showRestaurant"><p>show</p>
+         </form></div>
+
+         <div> <form id="createRating"><p>create</p>
+           <input type='float' name='rating[rate]' placeholder="Rate"/>
+           <input type='text' name='rating[address]' placeholder="Address"/> <input type='text' name='rating[restaurant]' placeholder="Restaurant ID"/>
+         </form>
+        </div>
+         <div> <form id="editRating"><p>edit</p>
+           <input type='float' name='rating[rate]' placeholder="Rate"/>
+           <input type='text' name='rating[address]' placeholder="Address"/>
+           <input type='text' name='rating[id]' placeholder="ID"/> <input type='text' name='rating [restaurant]' placeholder="Restaurant ID"/>
+         </form>
+        </div>
+        <div> <form id="deleteRating"><p>delete</p>
+          <input type='text' name='rating[id]' placeholder="ID"/>
+        </form></div>
+
+        <div><form id="showRating"><p>show</p>
+        </form></div>
 
         <!-- All login/signup forms  -->
         <div class="authp">
@@ -80,121 +115,9 @@
 
 
   <footer>
-  <div class="footer-gray">
-    <div class="footer-custom">
-      <div class="footer-lists">
-        <div class="footer-list-wrap">
-          <h6 class="ftr-hdr">Contact Us</h6>
-          <ul class="ftr-links-sub">
-            <li>1-800-000-0000</li>
-          </ul>
-
-        </div>
-        <!--/.footer-list-wrap-->
-        <div class="footer-list-wrap">
-          <h6 class="ftr-hdr">  Email Us</h6>
-          <ul class="ftr-links-sub">
-            <li><a href="/help/talktous.html" rel="nofollow">@FoodSens.com</a></li>
-            <li><a
-          <li><a href="/~/egift-cards/" rel="nofollow"></a></li>
-          </ul>
-        </div>
-        <div class="footer-list-wrap">
-          <h6 class="ftr-hdr">About FoodSens</h6>
-          <ul class="ftr-links-sub">
-            <li><a href="/asp/aboutus/default-asp/_/posters.htm" rel="nofollow">Our Company</a></li>
-            <li><a href="http://corporate.art.com/careers" rel="nofollow">Careers</a></li>
-            <li><a href="/asp/landing/artistrising" rel="nofollow">AFFiliated RESTAURANTS</a></li>
-            <li><a href="/~/art-for-business" rel="nofollow"> RESTAURANTS  featured IN RI MONTHLY</a></li>
-            <li><a href="http://affiliates.art.com/index.aspx" rel="nofollow"> Restaurant GIFT CARDS</a></li>
-            <li><a href="/catalog" rel="nofollow"><strong>Shop Our Restaurant Merchandise Catalog</strong></a></li>
-            <li><a href="http://blog.art.com" rel="nofollow">FoodSens.COM BLOG</a></li>
-          </ul>
-        </div>
-        <!--/.footer-list-wrap-->
-        <div class="footer-list-wrap">
-          <h6 class="ftr-hdr">Accounts</h6>
-          <ul class="ftr-links-sub">
-            <art:content rule="!loggedin">
-              <li class="ftr-Login"><span class="link login-trigger">Access My User Account</span></li>
-              <li><span class="link" onclick="link('/asp/secure/your_account/track_orders-asp/_/posters.htm')">Track User Ratings</span></li>
-            </art:content>
-            <art:content rule="loggedin">
-              <li class="ftr-Login"><span class="link ftr-access-my-account">Access MY Restaurant (Admin Account)</span></li>
-              <li><span class="link" onclick="window.location.href = getProfileKey() + '?pagetype=oh';">Track My Restaurant Ratings (Admin Acount)</span></li>
-            </art:content>
-          </ul>
-        </div>
-        <!--/.footer-list-wrap-->
-      </div>
-      <!--/.footer-lists-->
-      <div class="footer-email">
-        <h6 class="ftr-hdr">Sign up for FREE!  To recieve our monthly newsletter that contains restaurant promotions and coupons!</h6>
-        <div id="ftr-email" class="ftr-email-form">
-          <form id="ftrEmailForm" method="post" action="http://em.art.com/pub/rf">
-            <div class="error">Please enter a valid email address</div>
-            <input type="text" name="email_address_" id="ftrEmailInput" class="input" placeholder="Enter email address" />
-            <!--
-                -->
-            <input type="submit" class="button" value="SUBMIT" />
-            <input type="hidden" name="country_iso2" value="">
-            <input type="hidden" name="language_iso2" value="en">
-            <input type="hidden" name="site_domain" value="art.com">
-            <input type="hidden" name="email_acq_source" value="01-000001">
-            <input type="hidden" name="email_acq_date" value="" id="ftr-email-date">
-            <input type="hidden" name="brand_id" value="ART">
-            <input type="hidden" name="_ri_" value="X0Gzc2X%3DWQpglLjHJlYQGnp51yrMf2qXdC9tjU8pzgMtwfYzaVwjpnpgHlpgneHmgJoXX0Gzc2X%3DWQpglLjHJlYQGnyLSq2fzdkuzdzglHMsUhgeNzaSgkk">
-          </form>
-        </div>
-        <!--/.ftr-email-form-->
-        <div class="ftr-email-privacy-policy"></div>
-      </div>
-      <!--/.footer-email-->
-      <div class="footer-social">
-        <h6 class="ftr-hdr">Follow Us</h6>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/art.com" title="Facebook" onclick="_gaq.push(['_trackSocial', 'Facebook', 'Follow', 'Footer', 'undefined', 'True']);">
-              <img width="24" height="24" alt="Like us on Facebook" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/fb.png">
-            </a>
-          </li>
-          <li>
-            <a href="https://plus.google.com/108089796661280870153" title="Google+" onclick="_gaq.push(['_trackSocial', 'GooglePlus', 'Follow', 'Footer', 'undefined', 'True']);">
-              <img width="24" height="24" alt="Follow us on Google+" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/gplus.png">
-            </a>
-          </li>
-          <li>
-            <a href="https://pinterest.com/artdotcom/" target="_blank">
-              <img width="24" height="24" alt="Follow us on Pinterest" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/pin-badge.png">
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="http://instagram.com/artdotcom/">
-              <img width="24" height="24" alt="Follow us on Instagram" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/instagram-badge.png">
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com/artdotcom" title="Twitter" onclick="_gaq.push(['_trackSocial', 'Twitter', 'Follow', 'Footer', 'undefined', 'True']);">
-              <img width="67" alt="Follow us on Twitter" src="http://cache1.artprintimages.com/images/jump_pages/rebrand/footer/twitter.png">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!--/.footer-social-->
-      <div class="footer-legal">
-        <p>&copy; FoodSens.com Inc. All Rights Reserved. | <a href="/help/privacy-policy.html" rel="nofollow">Privacy Policy</a> | <a href="/help/terms-of-use.html" rel="nofollow">Terms of Use</a> | <a href="/help/terms-of-sale.html" rel="nofollow"></a></p>
-        <p>FoodSens.com, All Restaurant pictures, logos, trademarks or registered trademarks are proprietary. All Rights Reserved.</p>
-
-      </div>
-      <!--/.footer-legal-->
-      <div class="footer-payment">
-
-      </div>
-      <!--/.footer-payment-->
-    </div>
-    <!--/.footer-custom-->
-  </div>
-  <!--/.footer-gray-->
+    <div> <p> Contact: </p> </div>
+    <div> <p> Info:  </p> </div>
+    <div> <p> LOGO </p> </div>
  </footer>
     </body>
 </html>
