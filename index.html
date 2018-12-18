@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Pley With Your Food</title>
+  <title>FoodSens</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -22,7 +22,7 @@
       <h2>FoodSens</h2>
     </div>
     <div class="navbar-right">
-      <a href="#">STUFF</a>
+      <a href="#">Settings</a>
       <a href="#" id="accButton">Account</a>
     </div>
   </div>
@@ -145,6 +145,28 @@
     </div>
   </div>
 
+<div class="settingsp">
+    <div class="settings-page">
+      <div class="form">
+        <form id="changePassword">
+          <p id="accemail"></p>
+              <p>Change your password</p>
+              <fieldset>
+                <input type="password" name="passwords[old]" placeholder="Old password">
+                <input type="password" name="passwords[new]" placeholder="New password">
+                <input class="btn btn-outline-success" type="submit" value="Change password">
+              </fieldset>
+            </form>
+            <form id="sign-out">
+               <fieldset>
+                 <input class="btn btn-outline-success" type="submit" value="Sign out">
+               </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
   <footer>
     <div>
       <p> Contact: </p>
@@ -155,6 +177,7 @@
     <div>
       <p> LOGO </p>
     </div>
+
   </footer>
 </body>
 
