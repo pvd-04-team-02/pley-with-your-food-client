@@ -8,7 +8,12 @@ const mainForms = () => {
     $('.authp').hide()
 }
 
+const randrForms = () => {
+    $('.allForms').hide()
+}
+
 module.exports = {
     authForms,
-    mainForms
+    mainForms,
+    randrForms
 }
