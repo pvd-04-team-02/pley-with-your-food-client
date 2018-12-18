@@ -81,7 +81,7 @@ const createRatingFailure = error => {
   // $('#sign-up')[0].reset()
 }
 const createReviewSuccess = data => {
-  $('#message').text('created restaurant successfully')
+  $('#message').text('created review successfully')
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('createReviewSuccess ran. Data is :', data)
@@ -93,6 +93,68 @@ const createReviewFailure = error => {
   $('#message').addClass('failure')
   console.error('createFailure ran. Error is :', error)
 }
+const showRatingSuccess = data => {
+  $('#message').text('show rating successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('showRatingSuccess ran. Data is :', data)
+  $('#sign-up')[0].reset()
+}
+const showRatingFailure = error => {
+  $('#message').text('Error on sign up')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('showRatingFailure ran. Error is :', error)
+}
+const deleteRatingSuccess = data => {
+  $('#message').text('deleted rating successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('deleteRatingSuccess ran. Data is :', data)
+  $('#sign-up')[0].reset()
+}
+const deleteRatingFailure = error => {
+  $('#message').text('Error on sign up')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('deleteRatingFailure ran. Error is :', error)
+}
+const showRestaurantSuccess = data => {
+  $('#message').text('show restaurant successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('showRestaurantSuccess ran. Data is :', data)
+  $('#sign-up')[0].reset()
+}
+const showRestaurantFailure = error => {
+  $('#message').text('Error on sign up')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('showRestaurantFailure ran. Error is :', error)
+}
+const deletestaurantSuccess = data => {
+  $('#message').text('deleted restaurant successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('deleteRestaurantSuccess ran. Data is :', data)
+  $('#sign-up')[0].reset()
+}
+const editRestaurantSuccess = data => {
+  $('#message').text('edit restaurant successfully')
+  $('#message').removeClass()
+  $('#message').addClass('success')
+  console.log('editRestaurantSuccess ran. Data is :', data)
+  $('#sign-up')[0].reset()
+}
+const editRestaurantFailure = error => {
+  $('#message').text('Error on sign up')
+  $('#message').removeClass()
+  $('#message').addClass('failure')
+  console.error('editRestaurantFailure ran. Error is :', error)
+}
+
+
+
 
 
 module.exports = {
@@ -108,5 +170,14 @@ module.exports = {
   createRatingSuccess,
   createRatingFailure,
   createReviewSuccess,
-  createReviewFailure
+  createReviewFailure,
+  showRatingSuccess,
+  showRatingFailure,
+  deleteRatingSuccess,
+  deleteRatingFailure,
+  showRestaurantSuccess,
+  showRestaurantFailure,
+  deletestaurantSuccess,
+  editRestaurantSuccess,
+  editRestaurantFailure
 }
