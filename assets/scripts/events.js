@@ -76,21 +76,6 @@ const onUpdate = event => {
     .catch(ui.UpdateFailure)
 }
 
-
-let myIndex = 0;
-
-function carousel() {
-    let i;
-    let x = document.getElementsByClassName("myPhotos");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 5000);
-}
-
 module.exports = {
   onSignUp,
   onSignIn,
@@ -99,6 +84,5 @@ module.exports = {
   onCreate,
   onIndex,
   onDelete,
-  onUpdate,
-  carousel
+  onUpdate
 }

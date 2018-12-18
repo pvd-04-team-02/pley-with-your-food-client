@@ -17,7 +17,7 @@ $(() => {
   $('.Delete').on('submit', events.onDelete)
   $('.Index').on('submit', events.onIndex)
   $('#accButton').on('click', siteFunc.authForms)
-  $(document).ready(events.carousel)
+  $(document).ready(siteFunc.randrForms)
   $('.message a').click(function () {
     $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow')
   })
