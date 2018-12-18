@@ -69,12 +69,54 @@ const onDelete = event => {
 }
 const onUpdate = event => {
   event.preventDefault()
+  console.log('in onUpdate')
   const data = getFormFields(event.target)
   // $(event.target).trigger('reset')
   api.Update(data, data.restaurant.id)
     .then(ui.UpdateSuccess)
     .catch(ui.UpdateFailure)
 }
+
+const showFormFields = () => {
+
+  $('.allForms').show();
+}
+
+const showFormCreate = () => {
+  console.log('in show formcreate')
+  $('.createRating').show()
+}
+
+const showFormShow = () => {
+  console.log('in show formshow')
+  $('.showRating').show()
+}
+
+const showFormDelete = () => {
+  $('.deleteRating').show()
+}
+
+const showFormEdit = () => {
+  $('.editRating').show()
+}
+const showFormCreateAdmin = () => {
+  console.log('in show formcreate')
+  $('.createRating').show()
+}
+
+const showFormShowAdmin = () => {
+  console.log('in show formshow')
+  $('.showRating').show()
+}
+
+const showFormDeleteAdmin = () => {
+  $('.deleteRating').show()
+}
+
+const showFormEditAdmin = () => {
+  $('.editRating').show()
+}
+
 
 module.exports = {
   onSignUp,
@@ -84,5 +126,15 @@ module.exports = {
   onCreate,
   onIndex,
   onDelete,
-  onUpdate
+  onUpdate,
+  showFormFields,
+  showFormEdit,
+  showFormDelete,
+  showFormShow,
+  showFormCreate,
+  showFormEditAdmin,
+  showFormDeleteAdmin,
+  showFormShowAdmin,
+  showFormCreateAdmin
+
 }
