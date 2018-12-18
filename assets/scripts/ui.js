@@ -38,6 +38,7 @@ const signOutSuccess = data => {
   $('#message').addClass('success')
   console.log('signOutSuccess ran. Data is:', data)
   $('#sign-out')[0].reset()
+  siteFunc.mainForms()
 }
 const signOutFailure = error => {
   $('#message').text('Error on sign out')
