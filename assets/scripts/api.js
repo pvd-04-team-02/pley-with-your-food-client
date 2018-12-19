@@ -1,8 +1,9 @@
 const store = require('./store.js')
 const config = require('./config.js')
 
+//Auth events
 const signUp = data => {
-console.log(data)
+  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -39,6 +40,49 @@ const changePassword = function (data) {
   })
 }
 
+// rating CRUD actions
+
+const createRating = function (data) {
+  return $.ajax({
+    url: baseUrl + data.restaurant.id + '/ratings',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const showRating = function () {
+  return $.ajax({
+    url: baseUrl + '/ratings',
+    method: 'GET'
+  })
+}
+
+const deleteRating = function (data) {
+  return $.ajax({
+    url: baseUrl + '/ratings/' + data.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token' + store.user.token
+    }
+  })
+}
+
+const editRating = function (data) {
+  return $.ajax({
+    url: baseUrl + '/rating/' + data.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+    })
+}
+
+// restaurant CRUD actions
+
 const createRestaurant = function (data) {
   return $.ajax({
     url: baseUrl + '/restaurants',
@@ -51,16 +95,35 @@ const createRestaurant = function (data) {
   })
 }
 
-const createRating = function (data) {
+const showRestaurant = function () {
   return $.ajax({
-    url: baseUrl + data.restaurant.id + '/ratings',
-    method: 'POST',
+    url: baseUrl + '/restaurants',
+    method: 'GET'
+  })
+}
+
+const deleteRestaurant = function (data) {
+  return $.ajax({
+    url: baseUrl + '/restauruants/' + data.id,    
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token' + store.user.token
+    }                    
+  })
+}
+
+const editRestaurant = function (data) {
+  return $.ajax({
+    url: baseUrl + '/restaurant/' + data.id,
+    method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
     data
   })
-}
+}    
+
+
 
 
 

@@ -42,57 +42,40 @@ const onSignOut = event => {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-const onCreateRating = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  console.log(data)
-  // $(event.target).trigger('reset')
-  api.createRating(data)
-    .then(ui.CreateSuccess)
-    .catch(ui.CreateFailure)
-}
-const onCreateRestaurant = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  console.log(data)
-  // $(event.target).trigger('reset')
-  api.createRestaurant(data)
-    .then(ui.CreateSuccess)
-    .catch(ui.CreateFailure)
-}
 
-
-const onIndex = event => {
-  event.preventDefault()
-  // const data = getFormFields(event.target)
-  // $(event.target).trigger('reset')
-  api.index()
-    .then(ui.IndexSuccess)
-    .catch(ui.IndexFailure)
-}
-const onDelete = event => {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  // $(event.target).trigger('reset')
-  api.Delete(data.restaurant.id)
-    .then(ui.DeleteSuccess)
-    .catch(ui.DeleteFailure)
-}
-const onUpdate = event => {
-  event.preventDefault()
-  console.log('in onUpdate')
-  const data = getFormFields(event.target)
-  // $(event.target).trigger('reset')
-  api.Update(data, data.restaurant.id)
-    .then(ui.UpdateSuccess)
-    .catch(ui.UpdateFailure)
-}
+// const onIndex = event => {
+//   event.preventDefault()
+//   // const data = getFormFields(event.target)
+//   // $(event.target).trigger('reset')
+//   api.index()
+//     .then(ui.IndexSuccess)
+//     .catch(ui.IndexFailure)
+// }
+// const onDelete = event => {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   // $(event.target).trigger('reset')
+//   api.Delete(data.restaurant.id)
+//     .then(ui.DeleteSuccess)
+//     .catch(ui.DeleteFailure)
+// }
+// const onUpdate = event => {
+//   event.preventDefault()
+//   console.log('in onUpdate')
+//   const data = getFormFields(event.target)
+//   // $(event.target).trigger('reset')
+//   api.Update(data, data.restaurant.id)
+//     .then(ui.UpdateSuccess)
+//     .catch(ui.UpdateFailure)
+// }
 
 const showFormFields = () => {
 
   $('.allForms').show();
 }
 
+
+// USER SHOW FORM FIELDS
 const showFormCreate = () => {
   console.log('in show formcreate')
   console.log('hide all these normal user functions')
@@ -123,6 +106,46 @@ const showFormEdit = () => {
   $('.deleteRating').hide()
   $('.editRating').show()
 }
+
+// SUBMIT USER FORM FIELDS
+
+const onCreateRating = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  // $(event.target).trigger('reset')
+  api.createRating(data)
+    .then(ui.CreateSuccess)
+    .catch(ui.CreateFailure)
+}
+
+const onShowRating = event => {
+  event.preventDefault()
+  api.showRating()
+    .then(ui.showRatingSuccess)
+    .catch(ui.showRatingFailure)      
+}
+
+const onEditRating = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.editRating(data)
+    .then(ui.UpdateSuccess)
+    .catch(ui.UpdateFailure)
+}
+
+const onDeleteRating = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.onDeleteRating(data.rating.id)
+    .then(ui.DeleteSuccess)
+    .catch(ui.DeleteFailure) 
+}
+
+
+// SHOW ADMIN FORM FIELDS
+
 const showFormCreateAdmin = () => {
   console.log('in show formcreate')
   console.log('hide all other admin functions (3)')
@@ -154,6 +177,43 @@ const showFormEditAdmin = () => {
   $('.editRestaurant').show()
 }
 
+// SUBMIT ADMIN FORM FIELDS
+const onCreateRestaurant = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  // $(event.target).trigger('reset')
+  api.createRestaurant(data)
+    .then(ui.CreateSuccess)
+    .catch(ui.CreateFailure)
+}
+
+const onShowRestaurant = event => {
+  event.preventDefault()
+  api.showRestaurant()
+    .then(ui.showRestaurantSuccess)
+    .catch(ui.showRestaurantFailure)      
+}
+ 
+
+
+const onEditRestaurant = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.EditRestaurant(data)
+    .then(ui.UpdateSuccess)
+    .catch(ui.UpdateFailure)
+} 
+
+
+const onDeleteRestaurant = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // $(event.target).trigger('reset')
+  api.Delete(data.restaurant.id)
+    .then(ui.deleteRestaurantSuccess)
+    .catch(ui.deleteRestaurantFailure) 
+}
 
 module.exports = {
   onSignUp,
@@ -172,6 +232,14 @@ module.exports = {
   showFormEditAdmin,
   showFormDeleteAdmin,
   showFormShowAdmin,
-  showFormCreateAdmin
-
+  showFormCreateAdmin,
+  onCreateRestaurant,
+  onShowRestaurant,
+  onEditRestaurant,
+  onDeleteRestaurant,
+  onCreateRating,
+  onShowRating,
+  onEditRating,
+  onDeleteRating
+  
 }
