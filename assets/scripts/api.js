@@ -44,7 +44,7 @@ const changePassword = function (data) {
 
 const createRating = function (data) {
   return $.ajax({
-    url: baseUrl + data.restaurant.id + '/ratings',
+    url: configUrl + data.restaurant.id + '/ratings',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -55,14 +55,14 @@ const createRating = function (data) {
 
 const showRating = function () {
   return $.ajax({
-    url: baseUrl + '/ratings',
+    url: config.apiUrl + '/ratings',
     method: 'GET'
   })
 }
 
 const deleteRating = function (data) {
   return $.ajax({
-    url: baseUrl + '/ratings/' + data.id,
+    url: config.apiUrl + '/ratings/' + data.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token' + store.user.token
@@ -72,7 +72,7 @@ const deleteRating = function (data) {
 
 const editRating = function (data) {
   return $.ajax({
-    url: baseUrl + '/rating/' + data.id,
+    url: config.apiUrl + '/rating/' + data.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -85,7 +85,7 @@ const editRating = function (data) {
 
 const createRestaurant = function (data) {
   return $.ajax({
-    url: baseUrl + '/restaurants',
+    url: config.apiUrl + '/restaurants',
     // need to verify route is correct look at backend
     method: 'POST',
     headers: {
@@ -97,14 +97,14 @@ const createRestaurant = function (data) {
 
 const showRestaurant = function () {
   return $.ajax({
-    url: baseUrl + '/restaurants',
+    url: config.apiUrl + '/restaurants',
     method: 'GET'
   })
 }
 
 const deleteRestaurant = function (data) {
   return $.ajax({
-    url: baseUrl + '/restauruants/' + data.id,    
+    url: config.apiUrl + '/restauruants/' + data.id,    
     method: 'DELETE',
     headers: {
       Authorization: 'Token token' + store.user.token
@@ -114,7 +114,7 @@ const deleteRestaurant = function (data) {
 
 const editRestaurant = function (data) {
   return $.ajax({
-    url: baseUrl + '/restaurant/' + data.id,
+    url: config.apiUrl + '/restaurant/' + data.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -129,7 +129,7 @@ const editRestaurant = function (data) {
 
 // const createReview = function (data) {
 //   return $.ajax({
-//     url: baseUrl + data.restaurant.id + '/reviews',
+//     url: config.apiUrl + data.restaurant.id + '/reviews',
 //     method: 'POST',
 //     headers: {
 //       Authorization: 'Token token=' + store.user.token

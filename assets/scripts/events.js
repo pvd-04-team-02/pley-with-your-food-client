@@ -39,6 +39,7 @@ const onChangePassword = event => {
 
 const onSignOut = event => {
   event.preventDefault()
+  $('#goBack').hide()
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -193,8 +194,8 @@ const onCreateRestaurant = event => {
   console.log(data)
   // $(event.target).trigger('reset')
   api.createRestaurant(data)
-    .then(ui.CreateSuccess)
-    .catch(ui.CreateFailure)
+    .then(ui.createRestaurantSuccess)
+    .catch(ui.createRestaurantFailure)
 }
 
 const onShowRestaurant = event => {

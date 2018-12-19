@@ -22,6 +22,7 @@
       <h2>FoodSens</h2>
     </div>
     <div class="navbar-right">
+      <a href="#" id="goBack">Go Back</a>
       <a href="#" id="showSettings">Settings</a>
       <a href="#" id="accButton">Account</a>
     </div>
@@ -53,10 +54,12 @@
     <div class="allForms">
       <div class="createRestaurant">
         <form id="createRestaurant">
+          <fieldset>
           <p>create</p>
-          <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
-          <input type='text' name='restaurant[address]' placeholder="Address" />
-          <button type="button" id='submit-create-restaurant'>Submit</button>
+          <input type='text' name='restaurant[name]' placeholder="Restaurant Name">
+          <input type='text' name='restaurant[address]' placeholder="Address">
+          <input class="btn btn-outline-success" type="submit" value="Submit">
+          </fieldset>
         </form>
       </div>
 
@@ -155,7 +158,6 @@
     <div class="settings-page">
       <div class="form">
         <form id="changePassword">
-          <p id="accemail"></p>
               <p>Change your password</p>
               <fieldset>
                 <input type="password" name="passwords[old]" placeholder="Old password">
