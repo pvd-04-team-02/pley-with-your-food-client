@@ -1,3 +1,5 @@
+const store = require('./store.js')
+
 const authForms = () => {
     $('.allContent').hide()
     $('.authp').show() 
@@ -34,7 +36,11 @@ const goBack = () => {
     $('.allContent').show()
     $('.authp').hide()
     $('.settingsp').hide()
-    $('#showSettings').show()
+    if (store.user) {
+        $('#showSettings').show()
+    } else { $('#accButton').show()
+        
+    }
 }
 
 module.exports = {
