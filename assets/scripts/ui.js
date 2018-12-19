@@ -2,184 +2,161 @@
 
 const siteFunc = require('./site.js')
 
+
+// Auth UI //
+
+// Sign up //
 const signUpSuccess = data => {
-  $('#authmessage').empty()
-  $('#authmessage').text('Account Created!')
+  toastr.success('Success', 'Account created')
   $('#sign-up')[0].reset()
 }
 
 const signUpFailure = error => {
-  $('#authmessage').empty()
-  $('#authmessage').text('Error on sign up')
-  $('#authmessage').removeClass()
-  $('#authmessage').addClass('failure')
+  toastr.error('Failure', 'Account creation failed')
   $('#sign-up')[0].reset()
 }
+// End Sign up //
 
+// Sign in //
 const signInSuccess = data => {
-  $('#authmessage').empty()
-  $('#authmessage').text('Signed in')
-  $('#function-message').removeClass()
-  console.log('logged in')
+  toastr.success('Success', 'Signed in')
   $('#sign-in')[0].reset()
   siteFunc.mainForms()
 }
 
 const signInFailure = error => {
-  $('#authmessage').empty()
-  $('#authmessage').text('Error on sign in')
-  $('#authmessage').removeClass()
-  $('#authmessage').addClass('failure')
-  console.log('unable to login')
+  toastr.error('Failure', 'Sign in failed')
   $('#sign-in')[0].reset()
 }
+// End Sign in//
 
+// Sign out //
 const signOutSuccess = data => {
-  $('#function-message').text('Signed out succesfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('signOutSuccess ran. Data is:', data)
-  $('#sign-out')[0].reset()
+  toastr.success('Success', 'Signed out')
 }
+
 const signOutFailure = error => {
-  $('#function-message').text('Error on sign out')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('signOutFailure ran. Error is :', error)
-  $('#sign-out')[0].empty()
+  toastr.error('Failure', 'Sign out failed')
 }
+// End Sign out //
+
+// Change pass //
 const changePasswordSuccess = data => {
-  $('#function-message').text('Password changed successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('changePasswordSuccess ran. Data is :', data)
+  toastr.success('Success', 'Password changed')
   $('#change-password')[0].reset()
 }
+
 const changePasswordFailure = error => {
-  $('#function-message').text('Error on password change')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('changePasswordFailure ran. Error is :', error)
+  toastr.error('Failure', 'Password change failed')
   $('#change-password')[0].reset()
 }
+// End Change pass//
+
+// End Auth UI //
+
+// Restaurant UI //
+
+// Create //
 const createRestaurantSuccess = data => {
-  $('#function-message').text('created restaurant successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('createRatingSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
+  toastr.success('Success', 'Restaurant added')
+  $('#createRestaurant')[0].reset()
 }
+
 const createRestaurantFailure = error => {
-  $('#function-message').text('Unable to create restaurant')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('createFailure ran. Error is :', error)
-  // $('#sign-up')[0].reset()
+  toastr.error('Failure', 'Restaurant create failed')
+  $('#createRestaurant')[0].reset()
 }
-const createRatingSuccess = data => {
-  $('#function-message').text('created rating successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('createRatingSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
-}
-const createRatingFailure = error => {
-  $('#function-message').text('Unable to create rating')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('createFailure ran. Error is :', error)
-  // $('#sign-up')[0].reset()
-}
-// const createReviewSuccess = data => {
-//   $('#function-message').text('created review successfully')
-//   $('#function-message').removeClass()
-//   $('#function-message').addClass('success')
-//   console.log('createReviewSuccess ran. Data is :', data)
-//   $('#sign-up')[0].reset()
-// }
-// const createReviewFailure = error => {
-//   $('#function-message').text('Error on sign up')
-//   $('#function-message').removeClass()
-//   $('#function-message').addClass('failure')
-//   console.error('createFailure ran. Error is :', error) }
+// End Create //
 
-const showRatingSuccess = data => {
-  $('#function-message').text('show rating successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('showRatingSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
-}
-const showRatingFailure = error => {
-  $('#function-message').text('Unable to show rating')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('showRatingFailure ran. Error is :', error)
-}
-const deleteRatingSuccess = data => {
-  $('#function-message').text('deleted rating successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('deleteRatingSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
-}
-const deleteRatingFailure = error => {
-  $('#function-message').text('Unable to delete rating')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('deleteRatingFailure ran. Error is :', error)
-}
-const showRestaurantSuccess = data => {
-  $('#function-message').text('show restaurant successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('showRestaurantSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
-}
-const showRestaurantFailure = error => {
-  $('#function-message').text('Unable to show restaurant')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('showRestaurantFailure ran. Error is :', error)
-}
-const deleteRestaurantSuccess = data => {
-  $('#function-message').text('deleted restaurant successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('deleteRestaurantSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
-}
+// Edit //
 const editRestaurantSuccess = data => {
-  $('#function-message').text('edit restaurant successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('editRestaurantSuccess ran. Data is :', data)
-  $('#sign-up')[0].reset()
+  toastr.success('Success', 'Restaurant editted')
+  $('#editRestaurant')[0].reset()
 }
+
 const editRestaurantFailure = error => {
-  $('#function-message').text('Unable to edit restaurant')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('editRestaurantFailure ran. Error is :', error)
+  toastr.error('Failure', 'Restaurant edit failed')
+  $('#editRestaurant')[0].reset()
+}
+// End Edit //
+
+// Delete //
+const deleteRestaurantSuccess = data => {
+  toastr.success('Success', 'Restaurant deleted')
+  $('#deleteRestaurant')[0].reset()
 }
 
+const deleteRestaurantFailure = data => {
+  toastr.error('Failure', 'Restaurant delete fail')
+  $('#deleteRestaurant')[0].reset()
+}
+// End Delete //
+
+// Show //
+const showRestaurantSuccess = data => {
+  toastr.success('Success', 'Restaurant shown')
+  $('#showRestaurant')[0].reset()
+}
+
+const showRestaurantFailure = error => {
+  toastr.error('Failure', 'Restaurant show failed')
+  $('#showRestaurant')[0].reset()
+}
+// End Show //
+
+// End Restaurant UI //
+
+// Rating UI //
+
+// Create //
+const createRatingSuccess = data => {
+  toastr.success('Success', 'Rating created')
+  $('#createRating')[0].reset()
+}
+
+const createRatingFailure = error => {
+  toastr.error('Failure', 'Rating create failed')
+  $('#createRating')[0].reset()
+}
+// End Create //
+
+// Delete //
+const deleteRatingSuccess = data => {
+  toastr.success('Success', 'Rating deleted')
+  $('#deleteRating')[0].reset()
+}
+
+const deleteRatingFailure = error => {
+  toastr.error('Failure', 'Rating delete failed')
+  $('#deleteRating')[0].reset()
+}
+// End Delete //
+
+// Edit //
 const editRatingSuccess = data => {
-  $('#function-message').text('edit rating successfully')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('success')
-  console.log('editRating ran. Data is :', data)
-  $('#sign-up')[0].reset()
+  toastr.success('Success', 'Rating editted')
+  $('#editRating')[0].reset()
 }
+
 const editRatingFailure = error => {
-  $('#function-message').text('Unable to edit rating')
-  $('#function-message').removeClass()
-  $('#function-message').addClass('failure')
-  console.error('editRating ran. Error is :', error)
+  toastr.error('Failure', 'Rating edit failed')
+  $('#editRating')[0].reset()
+}
+// End Edit //
+
+// Show //
+const showRatingSuccess = data => {
+  toastr.success('Success', 'Ratings shown')
+  $('#showRating')[0].reset()
 }
 
+const showRatingFailure = error => {
+  toastr.error('Failure', 'Rating show failed')
+  $('#showRating')[0].reset()
+}
+// End Show //
 
-
-
+// End Rating UI //
 
 module.exports = {
   signUpSuccess,
@@ -201,6 +178,7 @@ module.exports = {
   showRestaurantSuccess,
   showRestaurantFailure,
   deleteRestaurantSuccess,
+  deleteRestaurantFailure,
   editRestaurantSuccess,
   editRestaurantFailure,
   editRatingSuccess,

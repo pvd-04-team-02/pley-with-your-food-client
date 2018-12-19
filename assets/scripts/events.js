@@ -84,37 +84,63 @@ const showFormFields = () => {
 
 const showFormCreate = () => {
   console.log('in show formcreate')
+  console.log('hide all these normal user functions')
   $('.createRating').show()
+  $('.showRating').hide()
+  $('.deleteRating').hide()
+  $('.editRating').hide()  
 }
 
 const showFormShow = () => {
   console.log('in show formshow')
   $('.showRating').show()
+  $('.createRating').hide()
+  $('.deleteRating').hide()
+  $('.editRating').hide()  
 }
 
 const showFormDelete = () => {
+  $('.createRating').hide()
+  $('.showRating').hide()
+  $('.editRating').hide() 
   $('.deleteRating').show()
 }
 
 const showFormEdit = () => {
+  $('.createRating').hide()
+  $('.showRating').hide()
+  $('.deleteRating').hide()
   $('.editRating').show()
 }
 const showFormCreateAdmin = () => {
   console.log('in show formcreate')
-  $('.createRating').show()
+  console.log('hide all other admin functions (3)')
+  $('.editRestaurant').hide()
+  $('.showRestaurant').hide()
+  $('.deleteRestaurant').hide()    
+  $('.createRestaurant').show()
 }
 
 const showFormShowAdmin = () => {
   console.log('in show formshow')
-  $('.showRating').show()
+  $('.editRestaurant').hide()
+  $('.createRestaurant').hide()
+  $('.deleteRestaurant').hide()  
+  $('.showRestaurant').show()
 }
 
 const showFormDeleteAdmin = () => {
-  $('.deleteRating').show()
+  $('.editRestaurant').hide()
+  $('.showRestaurant').hide()
+  $('.createRestaurant').hide()  
+  $('.deleteRestaurant').show()
 }
 
 const showFormEditAdmin = () => {
-  $('.editRating').show()
+  $('.createRestaurant').hide()
+  $('.showRestaurant').hide()
+  $('.deleteRestaurant').hide()  
+  $('.editRestaurant').show()
 }
 
 

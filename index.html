@@ -7,12 +7,14 @@
 
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="toastr.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
     crossorigin="anonymous">
 
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="toastr.js"></script>
 </head>
 
 <body>
@@ -45,7 +47,7 @@
               <button type="button" class="btn btn-dark" id='create-restaurant'>Create</button>
               <button type="button" class="btn btn-dark" id='show-restaurant'>Show</button>
               <button type="button" class="btn btn-dark" id='delete-restaurant'>Delete</button>
-              <button type="button" class="btn btn-dark" id='show-restaurant'>Edit</button>
+              <button type="button" class="btn btn-dark" id='edit-restaurant'>Edit</button>
             </div>
           </div>
     </div>
@@ -59,6 +61,7 @@
           <p>create</p>
           <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
           <input type='text' name='restaurant[address]' placeholder="Address" />
+          <button type="button" id='submit-create-restaurant'>Submit</button>
         </form>
       </div>
     
@@ -68,6 +71,7 @@
           <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
           <input type='text' name='restaurant[address]' placeholder="Address" />
           <input type='text' name='restaurant[id]' placeholder="ID" />
+          <button type="button" id='submit-edit-restaurant'>Submit</button>
         </form>
       </div>
     
@@ -75,6 +79,7 @@
         <form id="deleteRestaurant">
           <p>delete</p>
           <input type='text' name='restaurant[id]' placeholder="ID" />
+          <button type="button" id='submit-delete-restaurant'>Submit</button>
         </form>
       </div>
     
@@ -90,6 +95,7 @@
           <input type='float' name='rating[rate]' placeholder="Rate" />
           <input type='text' name='rating[address]' placeholder="Address" /> <input type='text' name='rating[restaurant]'
             placeholder="Restaurant ID" />
+            <button type="button" id='submit-create-rating'>Submit</button> 
         </form>
       </div>
     
@@ -100,6 +106,7 @@
           <input type='text' name='rating[address]' placeholder="Address" />
           <input type='text' name='rating[id]' placeholder="ID" /> <input type='text' name='rating [restaurant]'
             placeholder="Restaurant ID" />
+            <button type="button" id='submit-edit-rating'>Submit</button> 
         </form>
       </div>
     
@@ -107,13 +114,14 @@
         <form id="deleteRating">
           <p>delete</p>
           <input type='text' name='rating[id]' placeholder="ID" />
+          <button type="button" id='submit-delete-rating'>Submit</button>
         </form>
       </div>
     
       <div class="showRating">
         <form id="showRating">
           <p>show</p>
-          <input type='text' name='rating[id]' placeholder="ID" />
+          <input type='text' name='rating[id]' placeholder="ID" />          
         </form>
       </div>
     </div>
