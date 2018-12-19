@@ -11,6 +11,7 @@ const store = require('./store.js')
 const onSignUp = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log(data)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -77,6 +78,7 @@ const showFormFields = () => {
 
 // USER SHOW FORM FIELDS
 const showFormCreate = () => {
+  $('.allForms').show();
   console.log('in show formcreate')
   console.log('hide all these normal user functions')
   $('.createRating').show()
@@ -86,6 +88,7 @@ const showFormCreate = () => {
 }
 
 const showFormShow = () => {
+  $('.allForms').show();
   console.log('in show formshow')
   $('.showRating').show()
   $('.createRating').hide()
@@ -94,6 +97,7 @@ const showFormShow = () => {
 }
 
 const showFormDelete = () => {
+  $('.allForms').show();
   $('.createRating').hide()
   $('.showRating').hide()
   $('.editRating').hide() 
@@ -101,6 +105,7 @@ const showFormDelete = () => {
 }
 
 const showFormEdit = () => {
+  $('.allForms').show();
   $('.createRating').hide()
   $('.showRating').hide()
   $('.deleteRating').hide()
@@ -147,6 +152,7 @@ const onDeleteRating = event => {
 // SHOW ADMIN FORM FIELDS
 
 const showFormCreateAdmin = () => {
+  $('.allForms').show();
   console.log('in show formcreate')
   console.log('hide all other admin functions (3)')
   $('.editRestaurant').hide()
@@ -156,6 +162,7 @@ const showFormCreateAdmin = () => {
 }
 
 const showFormShowAdmin = () => {
+  $('.allForms').show();
   console.log('in show formshow')
   $('.editRestaurant').hide()
   $('.createRestaurant').hide()
@@ -164,6 +171,7 @@ const showFormShowAdmin = () => {
 }
 
 const showFormDeleteAdmin = () => {
+  $('.allForms').show();
   $('.editRestaurant').hide()
   $('.showRestaurant').hide()
   $('.createRestaurant').hide()  
@@ -171,6 +179,7 @@ const showFormDeleteAdmin = () => {
 }
 
 const showFormEditAdmin = () => {
+  $('.allForms').show();
   $('.createRestaurant').hide()
   $('.showRestaurant').hide()
   $('.deleteRestaurant').hide()  

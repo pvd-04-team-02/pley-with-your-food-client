@@ -1,13 +1,11 @@
 const authForms = () => {
     $('.allContent').hide()
-    $('.authp').show()
-    $('.allForms').hide()
+    $('.authp').show() 
 }
 
 const mainForms = () => {
     $('.allContent').show()
     $('.authp').hide()
-    $('.allForms').hide()
 }
 
 const settingShow = () => {

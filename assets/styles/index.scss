@@ -105,8 +105,22 @@
   }
 
   .settingsp {
+    display: none;
     width: 100%;
     height: 700px;
+    background: rgba(245,147,86,1);
+    background: -moz-linear-gradient(left, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,147,86,1)), color-stop(29%, rgba(221,121,71,1)), color-stop(57%, rgba(197,95,56,1)), color-stop(63%, rgba(192,90,53,1)), color-stop(91%, rgba(160,39,8,1)));
+    background: -webkit-linear-gradient(left, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
+    background: -o-linear-gradient(left, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
+    background: -ms-linear-gradient(left, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
+    background: linear-gradient(to right, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f59356', endColorstr='#a02708', GradientType=1 );
+  }
+
+  .allForms {
+    display: none;
+    height: 200px;
     background: rgba(245,147,86,1);
     background: -moz-linear-gradient(left, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,147,86,1)), color-stop(29%, rgba(221,121,71,1)), color-stop(57%, rgba(197,95,56,1)), color-stop(63%, rgba(192,90,53,1)), color-stop(91%, rgba(160,39,8,1)));
@@ -282,8 +296,12 @@
   display: none;
 }
 
-#function-message {
-  // display: none;
+#adminActions {
+  display: none;
+}
+
+#userActions {
+  display: none;
 }
 
 // End Login Form //

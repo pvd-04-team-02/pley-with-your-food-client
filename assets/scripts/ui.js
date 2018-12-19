@@ -23,7 +23,13 @@ const signInSuccess = data => {
   toastr.success('Success', 'Signed in')
   $('#sign-in')[0].reset()
   store.user = data.user
+  console.log(store.user)
   siteFunc.mainForms()
+  if (store.user.owner === true) {
+    $('#adminActions').show()
+  } else {
+    $('#userActions').show()
+  }
 }
 
 const signInFailure = error => {
@@ -35,6 +41,9 @@ const signInFailure = error => {
 // Sign out //
 const signOutSuccess = data => {
   $('#sign-out')[0].reset()
+  $('.allForms').hide()
+  $('#userActions').hide()
+  $('#adminActions').hide()
   siteFunc.mainForms()
   toastr.success('Success', 'Signed out')
 }
