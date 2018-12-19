@@ -8,12 +8,33 @@ const events = require('./events.js')
 const siteFunc = require('./site.js')
 
 $(() => {
+
+  // getting form fields to show
+  // $('.page-header-image').on('click', events.showFormFields)
+  $('#create-rating').on('click', events.showFormCreate)
+  $('#show-rating').on('click', events.showFormShow)
+  $('#delete-rating').on('click', events.showFormDelete)
+  $('#edit-rating').on('click', events.showFormEdit)
+  $('#create-restaurant').on('click', events.showFormCreateAdmin)
+  $('#show-restaurant').on('click', events.showFormShowAdmin)
+  $('#delete-restaurant').on('click', events.showFormDeleteAdmin)
+  $('#edit-restaurant').on('click', events.showFormEditAdmin)
+
+  // getting form fields to submit
+  $('submit-create-restairant').on('submit', events.)
+  $('submit-edit-restaurant').on('submit', events.)
+  $('submit-delete-restaurant').on('submit', events.)
+  $('submit-create-rating').on('submit', events.)
+  $('submit-edit-rating').on('submit', events.)
+  $('submit-delete-rating').on('submit', events.)
+
+  // submit
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
   $('#changePassword').on('submit', events.onChangePassword)
   $('#sign-out').on('submit', events.onSignOut)
   $('#Add').on('submit', events.onCreate)
-  $('.Edit').on('submit', events.onUpdate)
+  $('.page-header-image').on('submit', events.onUpdate)
   $('.Delete').on('submit', events.onDelete)
   $('.Index').on('submit', events.onIndex)
   $('#accButton').on('click', siteFunc.authForms)

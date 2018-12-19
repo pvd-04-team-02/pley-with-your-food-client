@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~toastr/build/toastr.css';
 
 // body {
 //     margin:0;
@@ -247,4 +248,43 @@
   color: #EF3B3A;
 }
 
+
 // End Login Form //
+.createRestaurant {
+  display: none;
+}
+
+.editRestaurant {
+  display: none;
+}
+
+.deleteRestaurant {
+  display: none;
+}
+
+.showRestaurant {
+  display: none;
+}
+
+.deleteRating {
+  display: none;
+}
+
+.createRating {
+  display: none;
+}
+
+.editRating {
+  display: none;
+}
+
+.showRating {
+  display: none;
+}
+
+#function-message {
+  // display: none;
+}
+
+// End Login Form //
+

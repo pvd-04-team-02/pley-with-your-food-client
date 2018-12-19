@@ -32,24 +32,23 @@
         <div class="function-bar" id="userActions">
             <div class="jumbotron col-lg-6 jumbotron-fluid">
               <h3> User Actions</h3>
-              <button type="button" class="btn btn-dark">Create</button>
-              <button type="button" class="btn btn-dark">Show</button>
-              <button type="button" class="btn btn-dark">Delete</button>
-              <button type="button" class="btn btn-dark">Edit</button>
+              <button type="button" class="btn btn-dark" id='create-rating'>Create</button>
+              <button type="button" class="btn btn-dark" id='show-rating'>Show</button>
+              <button type="button" class="btn btn-dark" id='delete-rating'>Delete</button>
+              <button type="button" class="btn btn-dark" id='edit-rating'>Edit</button>
             </div>
           </div>
 
           <div class="function-bar" id="adminActions">
             <div class="jumbotron col-lg-6 jumbotron-fluid">
               <h3> Admin Actions</h3>
-              <button type="button" class="btn btn-dark">Create</button>
-              <button type="button" class="btn btn-dark">Show</button>
-              <button type="button" class="btn btn-dark">Delete</button>
-              <button type="button" class="btn btn-dark">Edit</button>
+              <button type="button" class="btn btn-dark" id='create-restaurant'>Create</button>
+              <button type="button" class="btn btn-dark" id='show-restaurant'>Show</button>
+              <button type="button" class="btn btn-dark" id='delete-restaurant'>Delete</button>
+              <button type="button" class="btn btn-dark" id='edit-restaurant'>Edit</button>
             </div>
           </div>
     </div>
-
 
     <div class="allForms">
       <div class="createRestaurant">
@@ -57,6 +56,7 @@
           <p>create</p>
           <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
           <input type='text' name='restaurant[address]' placeholder="Address" />
+          <button type="button" id='submit-create-restaurant'>Submit</button>
         </form>
       </div>
 
@@ -66,6 +66,7 @@
           <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
           <input type='text' name='restaurant[address]' placeholder="Address" />
           <input type='text' name='restaurant[id]' placeholder="ID" />
+          <button type="button" id='submit-edit-restaurant'>Submit</button>
         </form>
       </div>
 
@@ -73,6 +74,7 @@
         <form id="deleteRestaurant">
           <p>delete</p>
           <input type='text' name='restaurant[id]' placeholder="ID" />
+          <button type="button" id='submit-delete-restaurant'>Submit</button>
         </form>
       </div>
 
@@ -88,6 +90,7 @@
           <input type='float' name='rating[rate]' placeholder="Rate" />
           <input type='text' name='rating[address]' placeholder="Address" /> <input type='text' name='rating[restaurant]'
             placeholder="Restaurant ID" />
+            <button type="button" id='submit-create-rating'>Submit</button> 
         </form>
       </div>
 
@@ -98,6 +101,7 @@
           <input type='text' name='rating[address]' placeholder="Address" />
           <input type='text' name='rating[id]' placeholder="ID" /> <input type='text' name='rating [restaurant]'
             placeholder="Restaurant ID" />
+            <button type="button" id='submit-edit-rating'>Submit</button> 
         </form>
       </div>
 
@@ -105,12 +109,14 @@
         <form id="deleteRating">
           <p>delete</p>
           <input type='text' name='rating[id]' placeholder="ID" />
+          <button type="button" id='submit-delete-rating'>Submit</button>
         </form>
       </div>
 
       <div class="showRating">
         <form id="showRating">
           <p>show</p>
+          <input type='text' name='rating[id]' placeholder="ID" />          
         </form>
       </div>
     </div>
