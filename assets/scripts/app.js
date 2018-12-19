@@ -18,6 +18,7 @@ $(() => {
   $('.Index').on('submit', events.onIndex)
   $('#accButton').on('click', siteFunc.authForms)
   $('#accButton').on('click', siteFunc.settingsForms)
+  $('#showSettings').on('click', siteFunc.settingShow)
   $(document).ready(siteFunc.mainForms)
   $('.message a').click(function () {
     $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow')

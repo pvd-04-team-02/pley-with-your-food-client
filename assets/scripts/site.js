@@ -10,7 +10,14 @@ const mainForms = () => {
     $('.allForms').hide()
 }
 
+const settingShow = () => {
+ $('.allContent').hide()
+ $('.authp').hide()
+ $('.settingsp').show()
+}
+
 module.exports = {
     authForms,
-    mainForms
+    mainForms,
+    settingShow
 }
