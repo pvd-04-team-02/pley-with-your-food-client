@@ -10,7 +10,7 @@ const siteFunc = require('./site.js')
 $(() => {
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
-  $('#change-password').on('submit', events.changePassword)
+  $('#changePassword').on('submit', events.onChangePassword)
   $('#sign-out').on('submit', events.onSignOut)
   $('#Add').on('submit', events.onCreate)
   $('.Edit').on('submit', events.onUpdate)
