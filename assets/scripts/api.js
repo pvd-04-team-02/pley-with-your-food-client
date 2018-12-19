@@ -62,6 +62,8 @@ const createRating = function (data) {
   })
 }
 
+
+
 // const createReview = function (data) {
 //   return $.ajax({
 //     url: baseUrl + data.restaurant.id + '/reviews',

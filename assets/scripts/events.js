@@ -42,15 +42,26 @@ const onSignOut = event => {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-const onCreate = event => {
+const onCreateRating = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log(data)
   // $(event.target).trigger('reset')
-  api.Create(data)
+  api.createRating(data)
     .then(ui.CreateSuccess)
     .catch(ui.CreateFailure)
 }
+const onCreateRestaurant = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  // $(event.target).trigger('reset')
+  api.createRestaurant(data)
+    .then(ui.CreateSuccess)
+    .catch(ui.CreateFailure)
+}
+
+
 const onIndex = event => {
   event.preventDefault()
   // const data = getFormFields(event.target)
