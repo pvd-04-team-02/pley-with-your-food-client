@@ -14,7 +14,7 @@ const signIn = data => {
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
-    data: data
+    data
   })
 }
 

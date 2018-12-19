@@ -1,6 +1,7 @@
 'use strict'
 
 const siteFunc = require('./site.js')
+const store = require('./store.js')
 
 const signUpSuccess = data => {
   $('#authmessage').empty()
@@ -21,6 +22,7 @@ const signInSuccess = data => {
   $('#authmessage').text('Signed in')
   $('#message').removeClass()
   $('#sign-in')[0].reset()
+  store.user = data.user
   siteFunc.mainForms()
 }
 
@@ -38,6 +40,7 @@ const signOutSuccess = data => {
   $('#message').addClass('success')
   console.log('signOutSuccess ran. Data is:', data)
   $('#sign-out')[0].reset()
+  siteFunc.mainForms()
 }
 const signOutFailure = error => {
   $('#message').text('Error on sign out')
@@ -51,7 +54,7 @@ const changePasswordSuccess = data => {
   $('#message').removeClass()
   $('#message').addClass('success')
   console.log('changePasswordSuccess ran. Data is :', data)
-  $('#change-password')[0].reset()
+  // $('#change-password')[0].reset()
 }
 const changePasswordFailure = error => {
   $('#message').text('Error on password change')
