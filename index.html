@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Pley With Your Food</title>
+  <title>FoodSens</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -22,7 +22,7 @@
       <h2>FoodSens</h2>
     </div>
     <div class="navbar-right">
-      <a href="#">STUFF</a>
+      <a href="#" id="showSettings">Settings</a>
       <a href="#" id="accButton">Account</a>
     </div>
   </div>
@@ -38,7 +38,7 @@
               <button type="button" class="btn btn-dark" id='edit-rating'>Edit</button>
             </div>
           </div>
-        
+
           <div class="function-bar" id="adminActions">
             <div class="jumbotron col-lg-6 jumbotron-fluid">
               <h3> Admin Actions</h3>
@@ -49,10 +49,7 @@
             </div>
           </div>
     </div>
-    <h4 id='function-message'>test</h4>
-    
-    
-  
+
     <div class="allForms">
       <div class="createRestaurant">
         <form id="createRestaurant">
@@ -62,7 +59,7 @@
           <button type="button" id='submit-create-restaurant'>Submit</button>
         </form>
       </div>
-    
+
       <div class="editRestaurant">
         <form id="editRestaurant">
           <p>edit</p>
@@ -72,7 +69,7 @@
           <button type="button" id='submit-edit-restaurant'>Submit</button>
         </form>
       </div>
-    
+
       <div class="deleteRestaurant">
         <form id="deleteRestaurant">
           <p>delete</p>
@@ -80,13 +77,13 @@
           <button type="button" id='submit-delete-restaurant'>Submit</button>
         </form>
       </div>
-    
+
       <div class="showRestaurant">
         <form id="showRestaurant">
           <p>show</p>
         </form>
       </div>
-    
+
       <div class="createRating">
         <form id="createRating">
           <p>create</p>
@@ -96,7 +93,7 @@
             <button type="button" id='submit-create-rating'>Submit</button> 
         </form>
       </div>
-    
+
       <div class="editRating">
         <form id="editRating">
           <p>edit</p>
@@ -107,7 +104,7 @@
             <button type="button" id='submit-edit-rating'>Submit</button> 
         </form>
       </div>
-    
+
       <div class="deleteRating">
         <form id="deleteRating">
           <p>delete</p>
@@ -115,7 +112,7 @@
           <button type="button" id='submit-delete-rating'>Submit</button>
         </form>
       </div>
-    
+
       <div class="showRating">
         <form id="showRating">
           <p>show</p>
@@ -137,6 +134,8 @@
           <input type="password" name="credentials[password]" placeholder="Password">
           <span class="fas fa-lock"></span>
           <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <p>Restaurant Owner</p><input type="radio" name="credentials[owner]">true
+          <input type="radio" name="credentials[owner]">false
           <button>Sign up</button>
           <p class="message">Already registered? <a href="#">Sign In</a></p>
         </form>
@@ -152,6 +151,28 @@
     </div>
   </div>
 
+<div class="settingsp">
+    <div class="settings-page">
+      <div class="form">
+        <form id="changePassword">
+          <p id="accemail"></p>
+              <p>Change your password</p>
+              <fieldset>
+                <input type="password" name="passwords[old]" placeholder="Old password">
+                <input type="password" name="passwords[new]" placeholder="New password">
+                <input class="btn btn-outline-success" type="submit" value="Change password">
+              </fieldset>
+            </form>
+            <form id="sign-out">
+               <fieldset>
+                 <input class="btn btn-outline-success" type="submit" value="Sign out">
+               </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
   <footer>
     <div>
       <p> Contact: </p>
@@ -162,6 +183,7 @@
     <div>
       <p> LOGO </p>
     </div>
+
   </footer>
 </body>
 

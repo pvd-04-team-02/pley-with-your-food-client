@@ -1,7 +1,9 @@
 'use strict'
 
 const siteFunc = require('./site.js')
+const store = require('./store.js')
 const toastr = require('toastr')
+
 
 
 // Auth UI //
@@ -22,6 +24,7 @@ const signUpFailure = error => {
 const signInSuccess = data => {
   toastr.success('Success', 'Signed in')
   $('#sign-in')[0].reset()
+  store.user = data.user
   siteFunc.mainForms()
 }
 
@@ -32,7 +35,9 @@ const signInFailure = error => {
 // End Sign in//
 
 // Sign out //
-const signOutSuccess = data => {
+const signOutSuccess = data => {)
+  $('#sign-out')[0].reset()
+  siteFunc.mainForms()
   toastr.success('Success', 'Signed out')
 }
 

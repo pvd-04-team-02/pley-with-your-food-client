@@ -31,14 +31,16 @@ $(() => {
   // submit
   $('#sign-up').on('submit', events.onSignUp)
   $('#sign-in').on('submit', events.onSignIn)
-  $('#change-password').on('submit', events.changePassword)
+  $('#changePassword').on('submit', events.onChangePassword)
   $('#sign-out').on('submit', events.onSignOut)
   $('#Add').on('submit', events.onCreate)
   $('.page-header-image').on('submit', events.onUpdate)
   $('.Delete').on('submit', events.onDelete)
   $('.Index').on('submit', events.onIndex)
   $('#accButton').on('click', siteFunc.authForms)
-  $(document).ready(siteFunc.randrForms)
+  $('#accButton').on('click', siteFunc.settingsForms)
+  $('#showSettings').on('click', siteFunc.settingShow)
+  $(document).ready(siteFunc.mainForms)
   $('.message a').click(function () {
     $('form').animate({height: 'toggle', opacity: 'toggle'}, 'slow')
   })
