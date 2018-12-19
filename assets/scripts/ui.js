@@ -25,6 +25,7 @@ const signInSuccess = data => {
   store.user = data.user
   console.log(store.user)
   siteFunc.mainForms()
+  siteFunc.signedIn()
   if (store.user.owner === true) {
     $('#adminActions').show()
   } else {
@@ -45,6 +46,7 @@ const signOutSuccess = data => {
   $('#userActions').hide()
   $('#adminActions').hide()
   siteFunc.mainForms()
+  siteFunc.signedOut()
   toastr.success('Success', 'Signed out')
 }
 

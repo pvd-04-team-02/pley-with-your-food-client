@@ -14,8 +14,20 @@ const settingShow = () => {
  $('.settingsp').show()
 }
 
+const signedIn = () => {
+    $('#accButton').hide()
+    $('#showSettings').show()
+}
+
+const signedOut = () => {
+    $('#showSettings').hide()
+    $('#accButton').show()
+}
+
 module.exports = {
     authForms,
     mainForms,
-    settingShow
+    settingShow,
+    signedIn,
+    signedOut
 }
