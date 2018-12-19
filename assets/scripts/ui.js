@@ -4,8 +4,6 @@ const siteFunc = require('./site.js')
 const store = require('./store.js')
 const toastr = require('toastr')
 
-
-
 // Auth UI //
 
 // Sign up //
@@ -35,7 +33,7 @@ const signInFailure = error => {
 // End Sign in//
 
 // Sign out //
-const signOutSuccess = data => {)
+const signOutSuccess = data => {
   $('#sign-out')[0].reset()
   siteFunc.mainForms()
   toastr.success('Success', 'Signed out')

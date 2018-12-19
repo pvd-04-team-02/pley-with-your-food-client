@@ -21,12 +21,12 @@ $(() => {
   $('#edit-restaurant').on('click', events.showFormEditAdmin)
 
   // getting form fields to submit
-  $('submit-create-restairant').on('submit', events.)
-  $('submit-edit-restaurant').on('submit', events.)
-  $('submit-delete-restaurant').on('submit', events.)
-  $('submit-create-rating').on('submit', events.)
-  $('submit-edit-rating').on('submit', events.)
-  $('submit-delete-rating').on('submit', events.)
+  $('submit-create-restaurant').on('submit', events.onCreateRestaurant)
+  $('submit-edit-restaurant').on('submit', events.onEditRestaurant)
+  $('submit-delete-restaurant').on('submit', events.onDeleteRestaurant)
+  $('submit-create-rating').on('submit', events.onCreateRating)
+  $('submit-edit-rating').on('submit', events.onEditRating)
+  $('submit-delete-rating').on('submit', events.onDeleteRating)
 
   // submit
   $('#sign-up').on('submit', events.onSignUp)
