@@ -1,6 +1,7 @@
 'use strict'
 
 const siteFunc = require('./site.js')
+const toastr = require('toastr')
 
 
 // Auth UI //
