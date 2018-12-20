@@ -30,6 +30,10 @@ Admin users (restaurant owners) will be able to view their restaurant's ratings 
 
 Our front-end uses Javascript and incorporates bootstraps, toastr for the UI design, and JQuery to hide and show elements. We also used JQuery to run our show elements that show our ratings and restaurant fields. Our photo collage was created using a bootstrap carousel and the gradient was generated and created by us.
 
+<h3>Wireframe</h3>
+<a href="https://imgur.com/urovKoo"><img src="https://i.imgur.com/urovKoo.jpg" title="source: imgur.com" />Wireframe Link</a>
+
+
 <h3>License</h3>
 This project is licensed under GA licensing - see the <a href=https://github.com/pvd-04-team-02/pley-with-your-food-client/blob/master/LICENSE> LICENSE.md</a> for more details
 
