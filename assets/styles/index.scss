@@ -317,9 +317,14 @@
 //Footer section
 .site__content {
   background: black;
-  color: #fff;
+  color: #ff43229f;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
+}
+
+.site__content a {
+  color: #ff43229f;
+  float: right;
 }
 

@@ -24,11 +24,13 @@ const signedIn = () => {
     $('#accButton').hide()
     $('#showSettings').show()
     $('#goBack').hide()
+    $('.site__content').hide()
 }
 
 const signedOut = () => {
     $('#showSettings').hide()
     $('#accButton').show()
+    $('.site__content').show()
 }
 
 const goBack = () => {
