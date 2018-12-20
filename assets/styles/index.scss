@@ -1,9 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~toastr/build/toastr.css';
 
-// body {
-//     margin:0;
-// }
+body {
+    background: black;
+}
 .navbar {
     max-height: 69px;
     overflow: hidden;
@@ -40,37 +40,9 @@
 
   .page-header-image {
     z-index: -1;
-    animation: pulse 10s infinite;
     height: 825px;
     max-height: 825px;
-  }
-
-  @keyframes pulse {
-    0% {
-      background: url('../../public/fancydrinks.jpg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    25% {
-      background: url('https://s.doctoroz.com/styles/720x480/s3/sites/default/files/slideshow/IceWater720.jpg?itok=f9eN6ui2')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    50% {
-      background: url('../../public/spaghetti.jpg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    75% {
-      background: url('../../public/burger.jpeg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    100% {
-      background: url('../../public/fish.jpg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
+    background: url('./public/fancydrinks.jpg') no-repeat 50% 50%;
   }
 
   .function-bar {
@@ -120,7 +92,7 @@
 
   .allForms {
     display: none;
-    height: 200px;
+    // height: 200px;
     background: rgba(245,147,86,1);
     background: -moz-linear-gradient(left, rgba(245,147,86,1) 0%, rgba(221,121,71,1) 29%, rgba(197,95,56,1) 57%, rgba(192,90,53,1) 63%, rgba(160,39,8,1) 91%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(245,147,86,1)), color-stop(29%, rgba(221,121,71,1)), color-stop(57%, rgba(197,95,56,1)), color-stop(63%, rgba(192,90,53,1)), color-stop(91%, rgba(160,39,8,1)));
@@ -150,7 +122,7 @@
 .form {
   position: relative;
   z-index: 1;
-  background: rgb(159, 162, 165);
+  background: rgb(255, 255, 255);
   max-width: 400px;
   margin: 0 auto;
   padding: 45px;
@@ -163,9 +135,9 @@
 }
 
 .form span {
-  background-color: #363b41;
+  background-color: #a9a9a9;
   border-radius: 3px 0px 0px 3px;
-  border-right: 3px solid #434a52;
+  border-right: 3px solid #8b8b8b;
   color: #606468;
   display: block;
   float: left;
@@ -178,8 +150,8 @@
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #3b4148;
-  color: #a9a9a9;
+  background: #a9a9a9;
+  color: #1b1a1a;
   width: 85%;
   border: 0;
   margin: 0 0 15px;
@@ -192,7 +164,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #01499E;
+  background: rgb(255, 102, 0);
   width: 100%;
   border: 0;
   padding: 15px;
@@ -204,7 +176,7 @@
 }
 
 .form button:hover,.form button:active,.form button:focus {
-  background: #006DBF;
+  background: rgb(252, 120, 32);
 }
 
 .form .message {
@@ -214,7 +186,7 @@
 }
 
 .form .message a {
-  color: #01499E;
+  color: rgb(255, 102, 0);
   text-decoration: none;
 }
 
@@ -329,5 +301,8 @@
 .site__content #team {
   color: #fff;
   display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 

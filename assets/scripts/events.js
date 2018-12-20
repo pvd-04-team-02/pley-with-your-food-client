@@ -94,7 +94,7 @@ const showFormShow = (event) => {
   $('.createRating').hide()
   $('.deleteRating').hide()
   $('.editRating').hide()
-  onShowRating(event)  
+  onShowRating(event)
 }
 
 const showFormDelete = () => {
