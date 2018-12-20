@@ -290,6 +290,17 @@ body {
 .site__content {
   background: black;
   color: #fff;
+  text-align: center;
+}
+
+.site__content a {
+  color: #fff;
+  background: black;
+}
+
+.site__content #team {
+  color: #fff;
+  display: inline-block;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
