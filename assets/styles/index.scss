@@ -1,9 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~toastr/build/toastr.css';
 
-// body {
-//     margin:0;
-// }
+body {
+    background: black;
+}
 .navbar {
     max-height: 69px;
     overflow: hidden;
@@ -38,39 +38,10 @@
     float: right;
   }
 
-  .page-header-image {
+  .carousel {
     z-index: -1;
-    animation: pulse 10s infinite;
     height: 825px;
     max-height: 825px;
-  }
-
-  @keyframes pulse {
-    0% {
-      background: url('../../public/fancydrinks.jpg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    25% {
-      background: url('https://s.doctoroz.com/styles/720x480/s3/sites/default/files/slideshow/IceWater720.jpg?itok=f9eN6ui2')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    50% {
-      background: url('../../public/spaghetti.jpg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    75% {
-      background: url('../../public/burger.jpeg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
-    100% {
-      background: url('../../public/fish.jpg')no-repeat 0 0;
-      background-size: 100% 100%;
-      z-index: -1;
-    }
   }
 
   .function-bar {
