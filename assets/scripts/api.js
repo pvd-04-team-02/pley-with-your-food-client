@@ -44,7 +44,7 @@ const changePassword = function (data) {
 
 const createRating = function (data) {
   return $.ajax({
-    url: configUrl + data.restaurant.id + '/ratings',
+    url: config.apiUrl + '/ratings',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -62,17 +62,17 @@ const showRating = function () {
 
 const deleteRating = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/ratings/' + data.id,
+    url: config.apiUrl + '/ratings/' + data,
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }
 
 const editRating = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/rating/' + data.id,
+    url: config.apiUrl + '/ratings/' + data.rating.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -104,17 +104,17 @@ const showRestaurant = function () {
 
 const deleteRestaurant = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/restauruants/' + data.id,    
+    url: config.apiUrl + '/restaurants/' + data,    
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     }                    
   })
 }
 
 const editRestaurant = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/restaurant/' + data.id,
+    url: config.apiUrl + '/restaurants/' + data.restaurant.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -146,5 +146,12 @@ module.exports = {
   signOut,
   changePassword,
   createRestaurant,
-  createRating
+  createRating,
+  showRating,
+  editRating,
+  deleteRating,
+  showRestaurant,
+  editRestaurant,
+  deleteRestaurant
+
 }

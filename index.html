@@ -65,19 +65,23 @@
 
       <div class="editRestaurant">
         <form id="editRestaurant">
+          <fieldset>
           <p>edit</p>
-          <input type='text' name='restaurant[name]' placeholder="Restaurant Name" />
-          <input type='text' name='restaurant[address]' placeholder="Address" />
-          <input type='text' name='restaurant[id]' placeholder="ID" />
-          <button type="button" id='submit-edit-restaurant'>Submit</button>
+          <input type='text' name='restaurant[name]' placeholder="Restaurant Name">
+          <input type='text' name='restaurant[address]' placeholder="Address">
+          <input type='text' name='restaurant[id]' placeholder="ID">
+          <input class="btn btn-outline-success" type="submit" value="Submit">
+          </fieldset>
         </form>
       </div>
 
       <div class="deleteRestaurant">
         <form id="deleteRestaurant">
+          <fieldset>
           <p>delete</p>
-          <input type='text' name='restaurant[id]' placeholder="ID" />
-          <button type="button" id='submit-delete-restaurant'>Submit</button>
+          <input type='text' name='restaurant[id]' placeholder="ID">
+          <input class="btn btn-outline-success" type="submit" value="Submit">
+           </fieldset>
         </form>
       </div>
 
@@ -88,23 +92,25 @@
       </div>
 
       <div class="createRating">
+                 
         <form id="createRating">
           <p>create</p>
-          <input type='float' name='rating[rate]' placeholder="Rate" />
-          <input type='text' name='rating[address]' placeholder="Address" /> <input type='text' name='rating[restaurant]'
-            placeholder="Restaurant ID" />
-            <button type="button" id='submit-create-rating'>Submit</button> 
+          <input type='float' name='rating[rate]' placeholder="Rate">
+          <input type='text' name='rating[address]' placeholder="Address">
+          <input type ='text' name='rating[comment]' placeholder="Comments">
+          <input type='text' name='rating[restaurant]' placeholder="Restaurant ID">
+            <input class="btn btn-outline-success" type="submit" value="Submit">
         </form>
       </div>
 
       <div class="editRating">
         <form id="editRating">
           <p>edit</p>
-          <input type='float' name='rating[rate]' placeholder="Rate" />
-          <input type='text' name='rating[address]' placeholder="Address" />
-          <input type='text' name='rating[id]' placeholder="ID" /> <input type='text' name='rating [restaurant]'
+          <input type='float' name='rating[rate]' placeholder="Rate">
+          <input type='text' name='rating[address]' placeholder="Address">
+          <input type='text' name='rating[id]' placeholder="ID"> <input type='text' name='rating [restaurant]'
             placeholder="Restaurant ID" />
-            <button type="button" id='submit-edit-rating'>Submit</button> 
+            <input class="btn btn-outline-success" type="submit" value="Submit"> 
         </form>
       </div>
 
@@ -112,14 +118,13 @@
         <form id="deleteRating">
           <p>delete</p>
           <input type='text' name='rating[id]' placeholder="ID" />
-          <button type="button" id='submit-delete-rating'>Submit</button>
+          <input class="btn btn-outline-success" type="submit" value="Submit">
         </form>
       </div>
 
       <div class="showRating">
         <form id="showRating">
-          <p>show</p>
-          <input type='text' name='rating[id]' placeholder="ID" />          
+          <p>show</p>        
         </form>
       </div>
     </div>
@@ -176,17 +181,10 @@
 
 
   <footer>
-    <div>
-      <p> Contact: </p>
-    </div>
-    <div>
-      <p> Info: </p>
-    </div>
-    <div>
-      <p> LOGO </p>
-    </div>
-
-  </footer>
+    <div class="site__content">
+     <p>© FoodSense.Com Copyright 2018</p>
+      <p></p>
+    </footer>
 </body>
 
 </html>

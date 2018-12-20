@@ -22,11 +22,11 @@ $(() => {
 
   // getting form fields to submit
   $('#createRestaurant').on('submit', events.onCreateRestaurant)
-  $('#submit-edit-restaurant').on('submit', events.onEditRestaurant)
-  $('#submit-delete-restaurant').on('submit', events.onDeleteRestaurant)
-  $('#submit-create-rating').on('submit', events.onCreateRating)
-  $('#submit-edit-rating').on('submit', events.onEditRating)
-  $('#submit-delete-rating').on('submit', events.onDeleteRating)
+  $('#editRestaurant').on('submit', events.onEditRestaurant)
+  $('#deleteRestaurant').on('submit', events.onDeleteRestaurant)
+  $('#createRating').on('submit', events.onCreateRating)
+  $('#editRating').on('submit', events.onEditRating)
+  $('#deleteRating').on('submit', events.onDeleteRating)
 
   // submit
   $('#sign-up').on('submit', events.onSignUp)

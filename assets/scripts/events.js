@@ -121,8 +121,8 @@ const onCreateRating = event => {
   console.log(data)
   // $(event.target).trigger('reset')
   api.createRating(data)
-    .then(ui.CreateSuccess)
-    .catch(ui.CreateFailure)
+    .then(ui.createRatingSuccess)
+    .catch(ui.createRatingFailure)
 }
 
 const onShowRating = event => {
@@ -136,17 +136,17 @@ const onEditRating = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.editRating(data)
-    .then(ui.UpdateSuccess)
-    .catch(ui.UpdateFailure)
+    .then(ui.editRatingSuccess)
+    .catch(ui.editRatingFailure)
 }
 
 const onDeleteRating = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   // $(event.target).trigger('reset')
-  api.onDeleteRating(data.rating.id)
-    .then(ui.DeleteSuccess)
-    .catch(ui.DeleteFailure) 
+  api.deleteRating(data.rating.id)
+    .then(ui.deleteRatingSuccess)
+    .catch(ui.deleteRatingFailure) 
 }
 
 
@@ -210,9 +210,10 @@ const onShowRestaurant = event => {
 const onEditRestaurant = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  api.EditRestaurant(data)
-    .then(ui.UpdateSuccess)
-    .catch(ui.UpdateFailure)
+  console.log(data)
+  api.editRestaurant(data)
+    .then(ui.editRestaurantSuccess)
+    .catch(ui.editRestaurantFailure)
 } 
 
 
@@ -220,7 +221,7 @@ const onDeleteRestaurant = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   // $(event.target).trigger('reset')
-  api.Delete(data.restaurant.id)
+  api.deleteRestaurant(data.restaurant.id)
     .then(ui.deleteRestaurantSuccess)
     .catch(ui.deleteRestaurantFailure) 
 }
