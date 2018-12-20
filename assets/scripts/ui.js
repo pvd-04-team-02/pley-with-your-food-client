@@ -113,7 +113,6 @@ const showRestaurantSuccess = data => {
   toastr.success('Success', 'Restaurant shown')
   console.log(data.restaurants)
   console.log(data.restaurants[0]._id)
-
   data.restaurants.forEach(restaurant => {
     $('.showRestaurant').append(`
       <div class=${restaurant._id}>
@@ -183,7 +182,6 @@ const editRatingFailure = error => {
 const showRatingSuccess = data => {
   toastr.success('Success', 'Ratings shown')
   console.log(data.ratings)
-
   data.ratings.forEach(rating => {
     $('.showRating').append(`
      <div class=${rating._id}>
