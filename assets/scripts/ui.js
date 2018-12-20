@@ -111,8 +111,27 @@ const deleteRestaurantFailure = data => {
 // Show //
 const showRestaurantSuccess = data => {
   toastr.success('Success', 'Restaurant shown')
-  $('#showRestaurant')[0].reset()
+  console.log(data.restaurants)
+  console.log(data.restaurants[0]._id)
+
+  data.restaurants.forEach(restaurant => {
+    $('.showRestaurant').append(`
+      <div class=${restaurant._id}>
+      <h4 id=${restaurant._id}>${restaurant._id}</h4>
+      </div>`)
+    $(`#${restaurant._id}`).css('color', '#01499E')
+    for (const key in restaurant) {
+      if (key !== '_id' && key !== '__v' && key !== 'createdAt' && key !== 'updatedAt') {
+        $(`.${restaurant._id}`).append(`<h6>${key}: ${restaurant[key]}</h6>`)
+        // $(`.${restaurant._id}`).css('border', '3px solid #434a52')
+        // $(`.${restaurant._id}`).css('background', 'rgba(159, 162, 165, 0.8)')
+        // $(`.${restaurant._id}`).css('box-shadow', '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)')
+        // $(`.${restaurant._id}`).css('margin', '4px')
+      }
+    }
+  })
 }
+
 
 const showRestaurantFailure = error => {
   toastr.error('Failure', 'Restaurant show failed')
@@ -163,13 +182,33 @@ const editRatingFailure = error => {
 // Show //
 const showRatingSuccess = data => {
   toastr.success('Success', 'Ratings shown')
-  $('#showRating')[0].reset()
+  console.log(data.ratings)
+
+  data.ratings.forEach(rating => {
+    $('.showRating').append(`
+     <div class=${rating._id}>
+     <h4 id=${rating._id}>${rating._id}</h4>
+     </div>`)
+     $(`#${rating._id}`).css('color', '#01499E')
+     for (const key in rating) {
+       if (key !== '_id' && key !== '__v' && key!=='createdAt' && key !== 'updatedAt') {
+          $(`.${rating._id}`).append(`<h6>${key}: ${rating[key]}, </h6>`)
+          // if rating.restaurant === datav2.restaurant.id
+          // print out restauarant and ratings for it
+          $(`.${rating._id}`).css('border', '3px solid #434a52')
+          $(`.${rating._id}`).css('background', 'rgba(159, 162, 165, 0.8)')
+          $(`.${rating._id}`).css('box-shadow', '0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)')
+          $(`.${rating._id}`).css('margin', '4px')         
+      }
+    }
+  })
 }
 
 const showRatingFailure = error => {
   toastr.error('Failure', 'Rating show failed')
   $('#showRating')[0].reset()
 }
+
 // End Show //
 
 // End Rating UI //

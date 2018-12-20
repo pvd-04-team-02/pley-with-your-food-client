@@ -88,13 +88,13 @@ const showFormCreate = () => {
   $('.editRating').hide()  
 }
 
-const showFormShow = () => {
+const showFormShow = (event) => {
   $('.allForms').show();
-  console.log('in show formshow')
   $('.showRating').show()
   $('.createRating').hide()
   $('.deleteRating').hide()
-  $('.editRating').hide()  
+  $('.editRating').hide()
+  onShowRating(event)  
 }
 
 const showFormDelete = () => {
@@ -162,13 +162,14 @@ const showFormCreateAdmin = () => {
   $('.createRestaurant').show()
 }
 
-const showFormShowAdmin = () => {
+const showFormShowAdmin = event => {
   $('.allForms').show();
   console.log('in show formshow')
   $('.editRestaurant').hide()
   $('.createRestaurant').hide()
   $('.deleteRestaurant').hide()  
   $('.showRestaurant').show()
+  onShowRestaurant(event)
 }
 
 const showFormDeleteAdmin = () => {
