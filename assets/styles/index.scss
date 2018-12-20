@@ -317,14 +317,17 @@
 //Footer section
 .site__content {
   background: black;
-  color: #ff43229f;
-  display: flex;
-  flex-wrap: wrap;
-  // justify-content: space-between;
+  color: #fff;
+  text-align: center;
 }
 
 .site__content a {
-  color: #ff43229f;
-  float: right;
+  color: #fff;
+  background: black;
+}
+
+.site__content #team {
+  color: #fff;
+  display: inline-block;
 }
 
