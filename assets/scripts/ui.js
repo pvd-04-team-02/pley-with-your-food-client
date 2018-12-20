@@ -52,6 +52,7 @@ const signOutSuccess = data => {
 
 const signOutFailure = error => {
   toastr.error('Failure', 'Sign out failed')
+  $('#sign-out')[0].reset()
 }
 // End Sign out //
 
