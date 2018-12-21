@@ -3,7 +3,6 @@ const config = require('./config.js')
 
 //Auth events
 const signUp = data => {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -121,22 +120,7 @@ const editRestaurant = function (data) {
     },
     data
   })
-}    
-
-
-
-
-
-// const createReview = function (data) {
-//   return $.ajax({
-//     url: config.apiUrl + data.restaurant.id + '/reviews',
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-// })
-// }
+}
 
 
 

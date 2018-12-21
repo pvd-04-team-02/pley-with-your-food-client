@@ -23,7 +23,6 @@ const signInSuccess = data => {
   toastr.success('Success', 'Signed in')
   $('#sign-in')[0].reset()
   store.user = data.user
-  console.log(store.user)
   siteFunc.mainForms()
   siteFunc.signedIn()
   $('.site__content').hide()
@@ -113,10 +112,6 @@ const deleteRestaurantFailure = data => {
 // Show //
 const showRestaurantSuccess = data => {
   toastr.success('Success', 'Restaurant shown')
-  console.log(data.restaurants)
-  console.log(data.restaurants[0]._id)
-  console.log('getting to this datapoint')
-  console.log(data.restaurants[0].name)
   $('.showRestaurant').empty()
   data.restaurants.forEach(restaurant => {
     $('.showRestaurant').append(`
@@ -139,7 +134,6 @@ const showRestaurantSuccess = data => {
 
 const showRestaurantFailure = error => {
   toastr.error('Failure', 'Restaurant show failed')
-  $('#showRestaurant')[0].reset()
 }
 // End Show //
 
@@ -186,7 +180,6 @@ const editRatingFailure = error => {
 // Show //
 const showRatingSuccess = data => {
   toastr.success('Success', 'Ratings shown')
-  console.log(data.ratings)
   data.ratings.forEach(rating => {
     $('.showRating').append(`
      <div class=${rating._id}>

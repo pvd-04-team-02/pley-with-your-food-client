@@ -11,7 +11,6 @@ const store = require('./store.js')
 const onSignUp = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -26,10 +25,8 @@ const onSignIn = (event) => {
 }
 
 const onChangePassword = event => {
-  console.log('in onChangePassword')
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   // takes this data and sends it to our server
   // using an HTTP request (POST)
   api.changePassword(data)
@@ -45,32 +42,6 @@ const onSignOut = event => {
     .catch(ui.signOutFailure)
 }
 
-// const onIndex = event => {
-//   event.preventDefault()
-//   // const data = getFormFields(event.target)
-//   // $(event.target).trigger('reset')
-//   api.index()
-//     .then(ui.IndexSuccess)
-//     .catch(ui.IndexFailure)
-// }
-// const onDelete = event => {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   // $(event.target).trigger('reset')
-//   api.Delete(data.restaurant.id)
-//     .then(ui.DeleteSuccess)
-//     .catch(ui.DeleteFailure)
-// }
-// const onUpdate = event => {
-//   event.preventDefault()
-//   console.log('in onUpdate')
-//   const data = getFormFields(event.target)
-//   // $(event.target).trigger('reset')
-//   api.Update(data, data.restaurant.id)
-//     .then(ui.UpdateSuccess)
-//     .catch(ui.UpdateFailure)
-// }
-
 const showFormFields = () => {
 
   $('.allForms').show();
@@ -80,8 +51,6 @@ const showFormFields = () => {
 // USER SHOW FORM FIELDS
 const showFormCreate = () => {
   $('.allForms').show();
-  console.log('in show formcreate')
-  console.log('hide all these normal user functions')
   $('.createRating').show()
   $('.showRating').hide()
   $('.deleteRating').hide()
@@ -118,7 +87,6 @@ const showFormEdit = () => {
 const onCreateRating = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   // $(event.target).trigger('reset')
   api.createRating(data)
     .then(ui.createRatingSuccess)
@@ -154,8 +122,6 @@ const onDeleteRating = event => {
 
 const showFormCreateAdmin = () => {
   $('.allForms').show();
-  console.log('in show formcreate')
-  console.log('hide all other admin functions (3)')
   $('.editRestaurant').hide()
   $('.showRestaurant').hide()
   $('.deleteRestaurant').hide()    
@@ -164,7 +130,6 @@ const showFormCreateAdmin = () => {
 
 const showFormShowAdmin = event => {
   $('.allForms').show();
-  console.log('in show formshow')
   $('.editRestaurant').hide()
   $('.createRestaurant').hide()
   $('.deleteRestaurant').hide()  
@@ -192,7 +157,6 @@ const showFormEditAdmin = () => {
 const onCreateRestaurant = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   // $(event.target).trigger('reset')
   api.createRestaurant(data)
     .then(ui.createRestaurantSuccess)
@@ -211,7 +175,6 @@ const onShowRestaurant = event => {
 const onEditRestaurant = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.editRestaurant(data)
     .then(ui.editRestaurantSuccess)
     .catch(ui.editRestaurantFailure)
