@@ -190,6 +190,13 @@ const onDeleteRestaurant = event => {
     .catch(ui.deleteRestaurantFailure) 
 }
 
+const showFormAll = event => {
+  event.preventDefault()
+  api.showRestaurant()
+    .then(ui.showRestaurantSuccess)
+    .catch(ui.showRestaurantFailure)      
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
@@ -211,6 +218,7 @@ module.exports = {
   onCreateRating,
   onShowRating,
   onEditRating,
-  onDeleteRating
+  onDeleteRating,
+  showFormAll
   
 }
