@@ -31,6 +31,7 @@ const signedOut = () => {
     $('#showSettings').hide()
     $('#accButton').show()
     $('.site__content').show()
+    $('.settingsp').hide()
 }
 
 const goBack = () => {

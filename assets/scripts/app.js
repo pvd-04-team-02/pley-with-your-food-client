@@ -15,7 +15,7 @@ $(() => {
   $('#show-rating').on('click', events.showFormShow)
   $('#delete-rating').on('click', events.showFormDelete)
   $('#edit-rating').on('click', events.showFormEdit)
-  $('#show-allRest').on('click', events.showFormAll)
+  $('#show-allRest').on('click', events.showFormShowAdmin)
   $('#create-restaurant').on('click', events.showFormCreateAdmin)
   $('#show-restaurant').on('click', events.showFormShowAdmin)
   $('#delete-restaurant').on('click', events.showFormDeleteAdmin)

@@ -129,7 +129,7 @@ const showFormCreateAdmin = () => {
 }
 
 const showFormShowAdmin = event => {
-  $('.allForms').show();
+  $('.allForms').show()
   $('.editRestaurant').hide()
   $('.createRestaurant').hide()
   $('.deleteRestaurant').hide()  
