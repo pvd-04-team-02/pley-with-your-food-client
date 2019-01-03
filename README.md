@@ -33,6 +33,11 @@ Our front-end uses Javascript and incorporates bootstraps, toastr for the UI des
 <h3>Wireframe</h3>
 <a href="https://imgur.com/urovKoo"><img src="https://i.imgur.com/urovKoo.jpg" title="source: imgur.com" />Wireframe Link</a>
 
+<a href="https://pvd-04-team-02.github.io/pley-with-your-food-client/"/> FoodSens Link to Frontend</a>
+
+<br><b>
+  Process: Our Scrum master, Seyi, held our morning standups at approximately 9:15 AM EST. Seyi and Nathan worked primarily on our frontend, while Eli and Sue worked on the backend. Our initial backend was scaffolded using Shawn's scaffolding program. We used Trello to prioritize our tasks during operational hours. We used our standup in the morning to delegate those tasks, and to design our overall code push and daily goals of what we expected to do, with the hours that we allocated for a specific task or feature. When we began testing our UI, we hooked my windows laptop to the television located in the classroom and we ran live demo's with the pulled code from our repository. From there we would use VS code's liveshare plugin, and all link to one repository. From there, we would use my laptop to break the site or show features, and then save and demo those changes on my machine. If the changes were successful, we would then commit and push up to our repository. We worked in pairs for the first couple of days, and once we had a functionanl site with CRUD actions that needed to be tested, we worked for the last two or three days with VScode liveshare.
+
 
 <h3>License</h3>
 This project is licensed under GA licensing - see the <a href=https://github.com/pvd-04-team-02/pley-with-your-food-client/blob/master/LICENSE> LICENSE.md</a> for more details
