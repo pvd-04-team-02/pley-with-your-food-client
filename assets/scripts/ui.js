@@ -60,12 +60,12 @@ const signOutFailure = error => {
 // Change pass //
 const changePasswordSuccess = data => {
   toastr.success('Success', 'Password changed')
-  $('#change-password')[0].reset()
+  $('#changePassword')[0].reset()
 }
 
 const changePasswordFailure = error => {
   toastr.error('Failure', 'Password change failed')
-  $('#change-password')[0].reset()
+  $('#changePassword')[0].reset()
 }
 // End Change pass//
 
