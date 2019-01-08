@@ -89,6 +89,7 @@ const onCreateRating = event => {
   const data = getFormFields(event.target)
   // $(event.target).trigger('reset')
   api.createRating(data)
+
     .then(ui.createRatingSuccess)
     .catch(ui.createRatingFailure)
 }
