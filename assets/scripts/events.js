@@ -54,7 +54,8 @@ const showFormCreate = () => {
   $('.createRating').show()
   $('.showRating').hide()
   $('.deleteRating').hide()
-  $('.editRating').hide()  
+  $('.editRating').hide()
+  $('.showRestaurant').hide()
 }
 
 const showFormShow = (event) => {
@@ -63,6 +64,7 @@ const showFormShow = (event) => {
   $('.createRating').hide()
   $('.deleteRating').hide()
   $('.editRating').hide()
+  $('.showRestaurant').hide()
   onShowRating(event)
 }
 
@@ -72,6 +74,7 @@ const showFormDelete = () => {
   $('.showRating').hide()
   $('.editRating').hide() 
   $('.deleteRating').show()
+  $('.showRestaurant').hide()
 }
 
 const showFormEdit = () => {
@@ -80,6 +83,7 @@ const showFormEdit = () => {
   $('.showRating').hide()
   $('.deleteRating').hide()
   $('.editRating').show()
+  $('.showRestaurant').hide()
 }
 
 // SUBMIT USER FORM FIELDS
