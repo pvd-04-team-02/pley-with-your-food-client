@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FoodSens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+    crossorigin="anonymous">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="./public/foodsenssm.png">
+    <div class="navbar-mid">
+      <h2>FoodSens</h2>
+    </div>
+    <div class="navbar-right">
+      <a href="#" id="goBack">Go Back</a>
+      <a href="#" id="showSettings">Settings</a>
+      <a href="#" id="accButton">Account</a>
+    </div>
+  </div>
+
+  <div class="allContent">
+    <div class="page-header-image">
+        <div class="function-bar" id="userActions">
+            <div class="jumbotron col-lg-6 jumbotron-fluid">
+              <h3> User Actions</h3>
+              <button type="button" class="btn btn-dark" id='create-rating'>Create</button>
+              <button type="button" class="btn btn-dark" id='show-rating'>Show</button>
+              <button type="button" class="btn btn-dark" id='delete-rating'>Delete</button>
+              <button type="button" class="btn btn-dark" id='edit-rating'>Edit</button>
+              <button type="button" class="btn btn-dark" id='show-allRest'>Restaurants</button>
+            </div>
+          </div>
+
+          <div class="function-bar" id="adminActions">
+            <div class="jumbotron col-lg-6 jumbotron-fluid">
+              <h3> Admin Actions</h3>
+              <button type="button" class="btn btn-dark" id='create-restaurant'>Create</button>
+              <button type="button" class="btn btn-dark" id='show-restaurant'>Show</button>
+              <button type="button" class="btn btn-dark" id='delete-restaurant'>Delete</button>
+              <button type="button" class="btn btn-dark" id='edit-restaurant'>Edit</button>
+            </div>
+          </div>
+    </div>
+
+    <div class="allForms">
+      <div class="createRestaurant">
+        <form id="createRestaurant">
+          <fieldset>
+          <p>Please create a restaurant by entering the name of the restaurant, and the address which its located at</p>
+          <input type='text' name='restaurant[name]' placeholder="Restaurant Name">
+          <input type='text' name='restaurant[address]' placeholder="Address">
+          <input class="btn btn-dark" type="submit" value="Submit">
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="editRestaurant">
+        <form id="editRestaurant">
+          <fieldset>
+          <p>Please enter the ID of the restaurant that you choose to edit, including the form fields that you wish to edit</p>
+          <input type='text' name='restaurant[name]' placeholder="Restaurant Name">
+          <input type='text' name='restaurant[address]' placeholder="Address">
+          <input type='text' name='restaurant[id]' placeholder="ID">
+          <input class="btn btn-dark" type="submit" value="Submit">
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="deleteRestaurant">
+        <form id="deleteRestaurant">
+          <fieldset>
+          <p>Please enter the ID of the restaurant that you choose to delete</p>
+          <input type='text' name='restaurant[id]' placeholder="ID">
+          <input class="btn btn-dark" type="submit" value="Submit">
+           </fieldset>
+        </form>
+      </div>
+
+      <div class="showRestaurant">
+      </div>
+
+      <div class="createRating">
+                 
+        <form id="createRating">
+          <p>Please enter the name of the restaurant, a rating from 1-10 (with 10 being the best, 1 being the worst), and any additional comments</p> 
+          <input type ='text' name='rating[name]' placeholder="Restaurant Name">
+          <input type='float' name='rating[rate]' placeholder="Rate">
+          <!-- <input type='text' name='rating[address]' placeholder="Address"> -->
+          <input type ='text' name='rating[comment]' placeholder="Comments">
+          
+          <!-- <input type='text' name='rating[restaurant]' placeholder="Restaurant ID"> -->
+            <input class="btn btn-dark" type="submit" value="Submit">
+        </form>
+      </div>
+
+      <div class="editRating">
+        <form id="editRating">
+          <p>Please enter the ID of the rating that you wish to edit, including all form fields that you wish to change</p>
+          <input type='float' name='rating[rate]' placeholder="Rate">
+          <input type='text' name='rating[address]' placeholder="Address">
+          <input type='text' name='rating[id]' placeholder="ID"> <input type='text' name='rating [restaurant]'
+            placeholder="Restaurant ID" />
+            <input class="btn btn-dark" type="submit" value="Submit"> 
+        </form>
+      </div>
+
+      <div class="deleteRating">
+        <form id="deleteRating">
+          <p>Please enter the ID of the rating that you wish to delete</p>
+          <input type='text' name='rating[id]' placeholder="ID" />
+          <input class="btn btn-dark" type="submit" value="Submit">
+        </form>
+      </div>
+
+      <div class="showRating">
+        <form id="showRating">
+          <p>Showing all ratings created by site users.</p>        
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- All login/signup forms  -->
+  <div class="authp">
+    <div class="login-page">
+      <div class="form">
+        <form id="sign-up">
+          <span class="far fa-user"></span>
+          <input type="text" name="credentials[email]" placeholder="Email" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+            required>
+          <span class="fas fa-lock"></span>
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <span class="fas fa-lock"></span>
+          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <p>Restaurant Owner</p><input type='radio' name="credentials[owner]" value='true' required>true
+          <input type="radio" name="credentials[owner]" value='false' required>false
+          <button>Sign up</button>
+          <p class="message">Already registered? <a href="#">Sign In</a></p>
+        </form>
+        <form id="sign-in">
+          <span class="far fa-user"></span>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <span class="fas fa-lock"></span>
+          <input type="password" name="credentials[password]" placeholder="Password">
+          <button>Log in</button>
+          <p class="message">Not registered? <a href="#">Create an account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<div class="settingsp">
+    <div class="settings-page">
+      <div class="form">
+        <form id="changePassword">
+              <p>Change your password</p>
+              <fieldset>
+                <input type="password" name="passwords[old]" placeholder="Old password">
+                <input type="password" name="passwords[new]" placeholder="New password">
+                <input class="btn btn-dark" type="submit" value="Change password">
+              </fieldset>
+            </form>
+            <form id="sign-out">
+               <fieldset>
+                 <input class="btn btn-dark" type="submit" value="Sign out">
+               </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="site__content">
+     <p>© FoodSens.com Copyright 2018</p>
+
+     <p>Our Team</p>
+      <a href="https://www.linkedin.com/in/susan-webdev/">Sue</a>
+      <a href="https://www.linkedin.com/in/eliwellington/">Eli</a>
+      <a href="http://www.linkedin.com/in/nathan-bissell">Nathan</a>
+      <a href="http://www.linkedin.com/in/seyis">Seyi</a>
+    </div>
+    </footer>
+</body>
+</html>
