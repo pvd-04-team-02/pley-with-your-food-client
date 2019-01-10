@@ -137,7 +137,7 @@ const showFormShowAdmin = event => {
   $('.allForms').show()
   $('.editRating').hide()
   $('.createRating').hide() 
-  $('.showRating').show()
+  $('.showRating').hide()
   $('.deleteRating').hide()
   $('.editRestaurant').hide()
   $('.createRestaurant').hide()
